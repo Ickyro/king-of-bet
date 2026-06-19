@@ -1,0 +1,9 @@
+{
+ "_meta": "WNBA 2026 (saison en cours, données réelles ~12-15 juin 2026 via ESPN/CBS/SI/Covers). ppg = points marqués/match, oppg = points encaissés/match. NB: 'Dallas Wings' oppg estimé (~89, défense bas de tableau — non publié proprement) ; toutes les autres valeurs sont relevées. Portland Fire & Toronto Tempo = franchises d'expansion 2026. Cotes des matchs = réelles (Pinnacle, The Odds API basketball_wnba).",
+ "Las Vegas Aces":          {"ppg": 91.4, "oppg": 85.5},
+ "Minnesota Lynx":          {"ppg": 91.1, "oppg": 78.2},
+ "Dallas Wings":            {"ppg": 84.8, "oppg": 89.0},
+ "Golden State Valkyries":  {"ppg": 77.7, "oppg": 79.3},
+ "Los Angeles Sparks":      {"ppg": 88.7, "oppg": 93.0},
+ "Portland Fire":           {"ppg": 82.1, "oppg": 85.3}
+}

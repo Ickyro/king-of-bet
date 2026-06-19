@@ -1,0 +1,332 @@
+{
+ "Haiti - Scotland": {
+  "h": 7.5,
+  "d": 4.8,
+  "a": 1.615
+ },
+ "Australia - Turkey": {
+  "h": 5.5,
+  "d": 3.9,
+  "a": 1.75
+ },
+ "Germany - Curacao": {
+  "h": 1.05,
+  "d": 22.0,
+  "a": 55.0
+ },
+ "Netherlands - Japan": {
+  "h": 2.26,
+  "d": 2.88,
+  "a": 3.93
+ },
+ "Ivory Coast - Ecuador": {
+  "h": 3.38,
+  "d": 2.91,
+  "a": 2.65
+ },
+ "Sweden - Tunisia": {
+  "h": 1.96,
+  "d": 3.46,
+  "a": 4.5
+ },
+ "Spain - Cape Verde": {
+  "h": 1.11,
+  "d": 11.78,
+  "a": 26.0
+ },
+ "Belgium - Egypt": {
+  "h": 1.67,
+  "d": 4.01,
+  "a": 5.75
+ },
+ "Saudi Arabia - Uruguay": {
+  "h": 7.7,
+  "d": 4.32,
+  "a": 1.5
+ },
+ "Iran - New Zealand": {
+  "h": 1.96,
+  "d": 3.4,
+  "a": 4.51
+ },
+ "France - Senegal": {
+  "h": 1.5,
+  "d": 4.49,
+  "a": 7.31
+ },
+ "Iraq - Norway": {
+  "h": 17.5,
+  "d": 7.53,
+  "a": 1.2
+ },
+ "Argentina - Algeria": {
+  "h": 1.42,
+  "d": 4.57,
+  "a": 9.6
+ },
+ "Austria - Jordan": {
+  "h": 1.35,
+  "d": 5.45,
+  "a": 9.65
+ },
+ "Portugal - DR Congo": {
+  "h": 1.33,
+  "d": 5.75,
+  "a": 11.22
+ },
+ "England - Croatia": {
+  "h": 1.75,
+  "d": 3.9,
+  "a": 5.07
+ },
+ "Ghana - Panama": {
+  "h": 2.2,
+  "d": 3.53,
+  "a": 3.51
+ },
+ "Uzbekistan - Colombia": {
+  "h": 9.65,
+  "d": 4.78,
+  "a": 1.4
+ },
+ "Czechia - South Africa": {
+  "h": 1.81,
+  "d": 3.9,
+  "a": 4.62
+ },
+ "Switzerland - Bosnia": {
+  "h": 1.61,
+  "d": 4.19,
+  "a": 6.25
+ },
+ "Canada - Qatar": {
+  "h": 1.3,
+  "d": 5.8,
+  "a": 12.4
+ },
+ "Mexico - South Korea": {
+  "h": 2.03,
+  "d": 3.42,
+  "a": 4.27
+ },
+ "Scotland - Morocco": {
+  "h": 5.12,
+  "d": 3.68,
+  "a": 1.81
+ },
+ "USA - Australia": {
+  "h": 1.62,
+  "d": 4.36,
+  "a": 5.68
+ },
+ "Brazil - Haiti": {
+  "h": 1.12,
+  "d": 11.85,
+  "a": 25.0
+ },
+ "Turkey - Paraguay": {
+  "h": 2.08,
+  "d": 3.41,
+  "a": 3.98
+ },
+ "Netherlands - Sweden": {
+  "h": 1.66,
+  "d": 4.17,
+  "a": 5.48
+ },
+ "Germany - Ivory Coast": {
+  "h": 1.58,
+  "d": 4.39,
+  "a": 5.99
+ },
+ "Ecuador - Curacao": {
+  "h": 1.17,
+  "d": 8.85,
+  "a": 21.0
+ },
+ "Tunisia - Japan": {
+  "h": 5.73,
+  "d": 3.67,
+  "a": 1.73
+ },
+ "Spain - Saudi Arabia": {
+  "h": 1.12,
+  "d": 10.04,
+  "a": 30.0
+ },
+ "Belgium - Iran": {
+  "h": 1.42,
+  "d": 4.88,
+  "a": 8.5
+ },
+ "Uruguay - Cape Verde": {
+  "h": 1.47,
+  "d": 4.62,
+  "a": 7.7
+ },
+ "New Zealand - Egypt": {
+  "h": 5.07,
+  "d": 3.82,
+  "a": 1.78
+ },
+ "Argentina - Austria": {
+  "h": 1.68,
+  "d": 3.9,
+  "a": 5.79
+ },
+ "France - Iraq": {
+  "h": 1.14,
+  "d": 8.45,
+  "a": 30.0
+ },
+ "Norway - Senegal": {
+  "h": 2.2,
+  "d": 3.54,
+  "a": 3.48
+ },
+ "Jordan - Algeria": {
+  "h": 7.01,
+  "d": 4.32,
+  "a": 1.53
+ },
+ "Portugal - Uzbekistan": {
+  "h": 1.26,
+  "d": 6.33,
+  "a": 14.2
+ },
+ "England - Ghana": {
+  "h": 1.33,
+  "d": 5.43,
+  "a": 11.1
+ },
+ "Panama - Croatia": {
+  "h": 7.21,
+  "d": 3.96,
+  "a": 1.57
+ },
+ "Colombia - DR Congo": {
+  "h": 1.48,
+  "d": 4.37,
+  "a": 8.1
+ },
+ "Switzerland - Canada": {
+  "h": 2.19,
+  "d": 3.44,
+  "a": 3.6
+ },
+ "Bosnia - Qatar": {
+  "h": 1.61,
+  "d": 4.01,
+  "a": 6.5
+ },
+ "Scotland - Brazil": {
+  "h": 7.31,
+  "d": 4.93,
+  "a": 1.46
+ },
+ "Morocco - Haiti": {
+  "h": 1.33,
+  "d": 5.33,
+  "a": 11.4
+ },
+ "Czechia - Mexico": {
+  "h": 4.62,
+  "d": 3.63,
+  "a": 1.87
+ },
+ "South Africa - South Korea": {
+  "h": 5.89,
+  "d": 4.02,
+  "a": 1.65
+ },
+ "Ecuador - Germany": {
+  "h": 4.39,
+  "d": 3.66,
+  "a": 1.75
+ },
+ "Curacao - Ivory Coast": {
+  "h": 14.71,
+  "d": 7.54,
+  "a": 1.15
+ },
+ "Japan - Sweden": {
+  "h": 2.04,
+  "d": 3.4,
+  "a": 3.55
+ },
+ "Tunisia - Netherlands": {
+  "h": 6.74,
+  "d": 4.38,
+  "a": 1.43
+ },
+ "Turkey - USA": {
+  "h": 2.7,
+  "d": 3.63,
+  "a": 2.39
+ },
+ "Paraguay - Australia": {
+  "h": 2.07,
+  "d": 3.34,
+  "a": 3.52
+ },
+ "Norway - France": {
+  "h": 4.16,
+  "d": 3.55,
+  "a": 1.83
+ },
+ "Senegal - Iraq": {
+  "h": 1.36,
+  "d": 4.66,
+  "a": 7.89
+ },
+ "Cape Verde - Saudi Arabia": {
+  "h": 2.4,
+  "d": 3.85,
+  "a": 2.57
+ },
+ "Uruguay - Spain": {
+  "h": 5.18,
+  "d": 3.89,
+  "a": 1.61
+ },
+ "Egypt - Iran": {
+  "h": 2.22,
+  "d": 2.99,
+  "a": 3.55
+ },
+ "New Zealand - Belgium": {
+  "h": 9.32,
+  "d": 5.6,
+  "a": 1.27
+ },
+ "Panama - England": {
+  "h": 7.69,
+  "d": 6.5,
+  "a": 1.26
+ },
+ "Croatia - Ghana": {
+  "h": 1.6,
+  "d": 3.78,
+  "a": 5.51
+ },
+ "Colombia - Portugal": {
+  "h": 3.48,
+  "d": 3.29,
+  "a": 2.1
+ },
+ "Uzbekistan - DR Congo": {
+  "h": 2.29,
+  "d": 3.31,
+  "a": 3.06
+ },
+ "Algeria - Austria": {
+  "h": 3.71,
+  "d": 3.03,
+  "a": 2.14
+ },
+ "Jordan - Argentina": {
+  "h": 13.38,
+  "d": 7.16,
+  "a": 1.16
+ }
+}

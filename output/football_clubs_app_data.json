@@ -1,0 +1,376 @@
+{
+ "sport": "football_clubs",
+ "sport_name": "Foot clubs",
+ "predictions": [
+  {
+   "id": 1,
+   "date": "2026-06-20",
+   "grp": "UCL",
+   "home": "Man City",
+   "away": "Inter",
+   "ko": false,
+   "pqh": null,
+   "pqa": null,
+   "desk": null,
+   "disc": {
+    "ref_conf": null,
+    "cards_exp": 5.2,
+    "p_over_cards45": 58.7,
+    "corners_exp": 10.1,
+    "p_over_corners95": 55.4
+   },
+   "p1": 44.4,
+   "pn": 28.8,
+   "p2": 26.8,
+   "f1": 2.25,
+   "fn": 3.47,
+   "f2": 3.73,
+   "o25": 48.0,
+   "btts": 53.3,
+   "xgh": 1.49,
+   "xga": 1.11,
+   "scores": [
+    [
+     1,
+     1,
+     13.8
+    ],
+    [
+     1,
+     0,
+     9.6
+    ],
+    [
+     2,
+     1,
+     9.1
+    ]
+   ],
+   "mkt": {
+    "h": 1.7,
+    "d": 3.9,
+    "a": 4.8,
+    "o25": 1.7,
+    "btts": 1.72,
+    "est": false
+   },
+   "edges": [
+    {
+     "sel": "1",
+     "cote": 1.7,
+     "pm": 44.4,
+     "pmkt": 57.1,
+     "pf": 53.3,
+     "edge": -9.4,
+     "stake": 0.0
+    },
+    {
+     "sel": "N",
+     "cote": 3.9,
+     "pm": 28.8,
+     "pmkt": 23.8,
+     "pf": 25.3,
+     "edge": -1.4,
+     "stake": 0.0
+    },
+    {
+     "sel": "2",
+     "cote": 4.8,
+     "pm": 26.8,
+     "pmkt": 19.1,
+     "pf": 20.7,
+     "edge": -0.7,
+     "stake": 0.0
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "date": "2026-06-20",
+   "grp": "UCL",
+   "home": "Real Madrid",
+   "away": "Liverpool",
+   "ko": false,
+   "pqh": null,
+   "pqa": null,
+   "desk": null,
+   "disc": {
+    "ref_conf": null,
+    "cards_exp": 5.2,
+    "p_over_cards45": 59.8,
+    "corners_exp": 10.1,
+    "p_over_corners95": 55.8
+   },
+   "p1": 40.0,
+   "pn": 29.1,
+   "p2": 30.9,
+   "f1": 2.5,
+   "fn": 3.44,
+   "f2": 3.23,
+   "o25": 48.8,
+   "btts": 54.7,
+   "xgh": 1.41,
+   "xga": 1.22,
+   "scores": [
+    [
+     1,
+     1,
+     13.9
+    ],
+    [
+     2,
+     1,
+     8.7
+    ],
+    [
+     0,
+     0,
+     8.7
+    ]
+   ],
+   "mkt": {
+    "h": 1.95,
+    "d": 3.7,
+    "a": 3.8,
+    "o25": 1.66,
+    "btts": 1.68,
+    "est": false
+   },
+   "edges": [
+    {
+     "sel": "1",
+     "cote": 1.95,
+     "pm": 40.0,
+     "pmkt": 49.8,
+     "pf": 46.8,
+     "edge": -8.7,
+     "stake": 0.0
+    },
+    {
+     "sel": "N",
+     "cote": 3.7,
+     "pm": 29.1,
+     "pmkt": 25.5,
+     "pf": 26.6,
+     "edge": -1.8,
+     "stake": 0.0
+    },
+    {
+     "sel": "2",
+     "cote": 3.8,
+     "pm": 30.9,
+     "pmkt": 24.8,
+     "pf": 26.6,
+     "edge": 1.2,
+     "stake": 0.1
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "date": "2026-06-21",
+   "grp": "UCL",
+   "home": "Paris SG",
+   "away": "Arsenal",
+   "ko": false,
+   "pqh": null,
+   "pqa": null,
+   "desk": null,
+   "disc": {
+    "ref_conf": null,
+    "cards_exp": 5.2,
+    "p_over_cards45": 59.9,
+    "corners_exp": 10.0,
+    "p_over_corners95": 54.6
+   },
+   "p1": 39.0,
+   "pn": 29.7,
+   "p2": 31.3,
+   "f1": 2.56,
+   "fn": 3.36,
+   "f2": 3.2,
+   "o25": 46.4,
+   "btts": 52.9,
+   "xgh": 1.35,
+   "xga": 1.18,
+   "scores": [
+    [
+     1,
+     1,
+     14.2
+    ],
+    [
+     0,
+     0,
+     9.5
+    ],
+    [
+     1,
+     0,
+     9.2
+    ]
+   ],
+   "mkt": {
+    "h": 1.8,
+    "d": 3.8,
+    "a": 4.3,
+    "o25": 1.74,
+    "btts": 1.7,
+    "est": false
+   },
+   "edges": [
+    {
+     "sel": "1",
+     "cote": 1.8,
+     "pm": 39.0,
+     "pmkt": 53.9,
+     "pf": 49.4,
+     "edge": -11.0,
+     "stake": 0.0
+    },
+    {
+     "sel": "N",
+     "cote": 3.8,
+     "pm": 29.7,
+     "pmkt": 24.6,
+     "pf": 26.1,
+     "edge": -0.8,
+     "stake": 0.0
+    },
+    {
+     "sel": "2",
+     "cote": 4.3,
+     "pm": 31.3,
+     "pmkt": 21.6,
+     "pf": 23.3,
+     "edge": 0.4,
+     "stake": 0.03
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "date": "2026-06-21",
+   "grp": "UCL",
+   "home": "Bayern",
+   "away": "Barcelona",
+   "ko": false,
+   "pqh": null,
+   "pqa": null,
+   "desk": null,
+   "disc": {
+    "ref_conf": null,
+    "cards_exp": 5.3,
+    "p_over_cards45": 60.7,
+    "corners_exp": 10.1,
+    "p_over_corners95": 55.5
+   },
+   "p1": 35.9,
+   "pn": 29.4,
+   "p2": 34.7,
+   "f1": 2.78,
+   "fn": 3.4,
+   "f2": 2.88,
+   "o25": 48.2,
+   "btts": 54.4,
+   "xgh": 1.31,
+   "xga": 1.29,
+   "scores": [
+    [
+     1,
+     1,
+     14.1
+    ],
+    [
+     0,
+     0,
+     8.9
+    ],
+    [
+     2,
+     1,
+     8.2
+    ]
+   ],
+   "mkt": {
+    "h": 2.1,
+    "d": 3.8,
+    "a": 3.3,
+    "o25": 1.6,
+    "btts": 1.6,
+    "est": false
+   },
+   "edges": [
+    {
+     "sel": "1",
+     "cote": 2.1,
+     "pm": 35.9,
+     "pmkt": 46.2,
+     "pf": 43.1,
+     "edge": -9.4,
+     "stake": 0.0
+    },
+    {
+     "sel": "N",
+     "cote": 3.8,
+     "pm": 29.4,
+     "pmkt": 24.9,
+     "pf": 26.3,
+     "edge": -0.2,
+     "stake": 0.0
+    },
+    {
+     "sel": "2",
+     "cote": 3.3,
+     "pm": 34.7,
+     "pmkt": 28.9,
+     "pf": 30.6,
+     "edge": 1.0,
+     "stake": 0.11
+    }
+   ]
+  }
+ ],
+ "values": [],
+ "ticket_batch": {
+  "_meta": {
+   "n_legs_pool": 0,
+   "opts": {
+    "profiles": [
+     "banker",
+     "value",
+     "jackpot",
+     "fun"
+    ],
+    "n_variants": 3,
+    "max_legs": 4,
+    "min_leg_odds": 1.12,
+    "max_leg_odds": 12.0,
+    "min_leg_prob": 0.12,
+    "jackpot_bands": [
+     10,
+     25,
+     50
+    ],
+    "markets": null,
+    "avoid_public": false,
+    "public_teams": [
+     "France",
+     "Brazil",
+     "England",
+     "USA",
+     "Mexico",
+     "Argentina"
+    ],
+    "must_team": null,
+    "bankroll": 100.0,
+    "exclude_est": false
+   }
+  },
+  "banker": [],
+  "value": [],
+  "jackpot": [],
+  "fun": []
+ },
+ "ticket_pool": []
+}

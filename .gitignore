@@ -1,0 +1,29 @@
+# 🔒 SECRET — ne JAMAIS committer la clé API (elle vit en secret GitHub Actions)
+data/api_config.json
+
+# Backups du stabilisateur safe_update.py
+data/_backups/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Lanceur Windows / binaires (inutiles pour le web)
+*.exe
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+*.swp
+
+# Fichiers temporaires
+*.bak
+*.tmp
+
+# 🔐 "Recette" / méthode — gardés PRIVÉS (hors dépôt public)
+# (le moteur tolère l'absence de desk.json : la gate de confiance du desk est alors inactive)
+BASE_CONNAISSANCES.md
+AGENTS.md
+data/desk.json
+king-of-bet.zip

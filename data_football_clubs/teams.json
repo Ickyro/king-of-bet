@@ -1,0 +1,11 @@
+{
+ "_meta": "DONNEES DEMO clubs (Elo/att/def illustratifs, NON live) — valider la réutilisation du moteur football. A remplacer par collecte (clubelo.com, FBref).",
+ "Paris SG":    {"elo": 2010, "att": 1.18, "def": 0.85, "adj": 0},
+ "Real Madrid": {"elo": 2025, "att": 1.20, "def": 0.86, "adj": 0},
+ "Man City":    {"elo": 2030, "att": 1.22, "def": 0.84, "adj": 0},
+ "Bayern":      {"elo": 1995, "att": 1.17, "def": 0.88, "adj": 0},
+ "Liverpool":   {"elo": 1985, "att": 1.15, "def": 0.90, "adj": 0},
+ "Inter":       {"elo": 1950, "att": 1.08, "def": 0.82, "adj": 0},
+ "Arsenal":     {"elo": 1975, "att": 1.12, "def": 0.83, "adj": 0},
+ "Barcelona":   {"elo": 1990, "att": 1.19, "def": 0.92, "adj": 0}
+}

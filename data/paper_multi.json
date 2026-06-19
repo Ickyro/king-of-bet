@@ -1,0 +1,45 @@
+{
+ "bankroll": 104.96,
+ "start": 100.0,
+ "bets": [
+  {
+   "id": 1,
+   "sport": "wnba",
+   "date": "2026-06-16",
+   "event_id": 1,
+   "match": "Under 177.0 pts (Dallas Wings @ Las Vegas Aces)",
+   "market": "Total",
+   "sel": "Under 177.0",
+   "cote": 1.96,
+   "p": 0.5438,
+   "edge": 0.0658,
+   "stake": 1.71,
+   "status": "won",
+   "placed": "2026-06-15",
+   "line_open": 1.96,
+   "cote_close": 1.91,
+   "clv": 0.0262,
+   "pl": 1.64
+  },
+  {
+   "id": 2,
+   "sport": "wnba",
+   "date": "2026-06-16",
+   "event_id": 3,
+   "match": "Under 173.5 pts (Golden State Valkyries @ Los Angeles Sparks)",
+   "market": "Total",
+   "sel": "Under 173.5",
+   "cote": 1.86,
+   "p": 0.609,
+   "edge": 0.1327,
+   "stake": 3.86,
+   "status": "won",
+   "placed": "2026-06-15",
+   "line_open": 1.86,
+   "cote_close": 1.94,
+   "clv": -0.0412,
+   "pl": 3.32
+  }
+ ],
+ "next_id": 3
+}

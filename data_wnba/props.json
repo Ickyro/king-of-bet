@@ -1,0 +1,39 @@
+{
+ "Golden State Valkyries @ Los Angeles Sparks": {
+  "home": "Golden State Valkyries",
+  "away": "Los Angeles Sparks",
+  "market": "player_points",
+  "players": [
+   {
+    "player": "Kelsey Plum",
+    "line": 20.5,
+    "over": 1.81,
+    "under": 1.93
+   },
+   {
+    "player": "Gabby Williams",
+    "line": 16.5,
+    "over": 1.81,
+    "under": 1.93
+   },
+   {
+    "player": "Veronica Burton",
+    "line": 15.5,
+    "over": 1.94,
+    "under": 1.8
+   },
+   {
+    "player": "Nneka Ogwumike",
+    "line": 14.5,
+    "over": 1.97,
+    "under": 1.78
+   },
+   {
+    "player": "Dearica Hamby",
+    "line": 12.5,
+    "over": 1.85,
+    "under": 1.88
+   }
+  ]
+ }
+}

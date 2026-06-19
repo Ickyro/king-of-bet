@@ -1,0 +1,6 @@
+[
+ {"id": 1, "date": "2026-09-10", "competition": "NFL (DEMO)", "home": "Chiefs", "away": "Ravens",
+  "odds": {"ml_home": 1.74, "ml_away": 2.10, "total_line": 47.5, "over": 1.91, "under": 1.91, "spread_home": -2.5, "spread_odds": 1.91, "est": true}},
+ {"id": 2, "date": "2026-09-10", "competition": "NFL (DEMO)", "home": "49ers", "away": "Lions",
+  "odds": {"ml_home": 1.60, "ml_away": 2.40, "total_line": 49.5, "over": 1.90, "under": 1.90, "spread_home": -3.5, "spread_odds": 1.91, "est": true}}
+]

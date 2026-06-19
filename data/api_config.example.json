@@ -1,0 +1,8 @@
+{
+  "_meta": "MODÈLE. Copier en data/api_config.json (gitignoré) pour un usage LOCAL. En ligne, ne PAS committer la vraie clé : la mettre dans le secret GitHub Actions ODDS_API_KEY (et APIFOOTBALL_KEY).",
+  "odds_api_key": "TA_CLE_THE_ODDS_API",
+  "apifootball_key": "",
+  "apifootball_host": "v3.football.api-sports.io",
+  "apifootball_league": 1,
+  "apifootball_season": 2026
+}

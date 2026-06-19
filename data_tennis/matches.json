@@ -1,0 +1,7 @@
+[
+ {"id": 1, "date": "2026-06-15", "tournament": "Halle (gazon, grille indicative)", "surface": "grass", "p1": "Zverev",          "p2": "Bublik"},
+ {"id": 2, "date": "2026-06-15", "tournament": "Queen's (gazon, grille indicative)","surface": "grass", "p1": "De Minaur",       "p2": "Lehecka"},
+ {"id": 3, "date": "2026-06-16", "tournament": "Halle (gazon, grille indicative)", "surface": "grass", "p1": "Shelton",         "p2": "Fritz"},
+ {"id": 4, "date": "2026-06-16", "tournament": "Halle (gazon, grille indicative)", "surface": "grass", "p1": "Auger-Aliassime", "p2": "Rublev"},
+ {"id": 5, "date": "2026-06-17", "tournament": "Queen's (gazon, grille indicative)","surface": "grass", "p1": "Medvedev",        "p2": "Cobolli"}
+]

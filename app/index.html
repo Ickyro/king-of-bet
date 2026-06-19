@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>King of Bet — Analyse multi-sports</title>
+<style>
+:root{--bg:#0d1117;--bg2:#161b22;--bg3:#21262d;--border:#30363d;--txt:#e6edf3;--mut:#a9b4c0;--gold:#d29922;--green:#3fb950;--blue:#58a6ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:radial-gradient(1200px 600px at 50% -10%,#1a2332,#0d1117);color:var(--txt);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
+h1{font-size:2.1em;color:var(--gold);letter-spacing:.5px}
+.sub{color:var(--mut);margin:10px 0 28px;max-width:620px;line-height:1.5}
+.cards{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;max-width:760px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:24px;width:330px;text-decoration:none;color:var(--txt);transition:transform .15s,border-color .15s;text-align:left}
+.card:hover{transform:translateY(-3px);border-color:var(--gold)}
+.card .ic{font-size:2em}
+.card h2{font-size:1.15em;margin:10px 0 6px}
+.card p{color:var(--mut);font-size:.9em;line-height:1.45}
+.card .go{display:inline-block;margin-top:14px;color:var(--blue);font-weight:600;font-size:.9em}
+footer{margin-top:34px;color:var(--mut);font-size:.78em;max-width:680px;line-height:1.5;border-top:1px solid var(--border);padding-top:16px}
+footer b{color:#e0b35c}
+.upd{margin-top:10px;color:var(--mut);font-size:.8em}
+a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+  <h1>🏆 King of Bet</h1>
+  <div class="sub">Modèle d'analyse multi-sports (Elo / Poisson / blend marché / Kelly) avec line shopping, suivi CLV et calibration. <b style="color:var(--green)">Outil d'analyse — paris 100% virtuels.</b></div>
+  <div class="cards">
+    <a class="card" href="MultiSport.html">
+      <div class="ic">📊</div>
+      <h2>Hub multi-sports</h2>
+      <p>Foot, WNBA, NHL, NFL, tennis… Pronostics, value bets, tickets, ledger live (ROI/CLV) et calibration du modèle.</p>
+      <span class="go">Ouvrir le hub →</span>
+    </a>
+    <a class="card" href="WorldcupKingOfBet.html">
+      <div class="ic">⚽</div>
+      <h2>Coupe du Monde 2026</h2>
+      <p>App dédiée : pronostics 1N2, qualifications Monte-Carlo, matchups, buteurs, générateur de tickets et suivi des paris.</p>
+      <span class="go">Ouvrir l'app WC →</span>
+    </a>
+  </div>
+  <div class="upd">Données rafraîchies automatiquement <span id="upd"></span></div>
+  <footer>
+    <b>⚠️ Avertissement.</b> Ce site est un projet personnel d'analyse statistique à but informatif et éducatif. Les probabilités ne sont pas des certitudes et aucun pari réel n'y est engagé (bankroll fictive). Rien ici ne constitue un conseil en paris ou en investissement. Les paris sportifs comportent un risque de perte et de dépendance — jouez de manière responsable, et uniquement là où c'est légal et selon votre âge. Cotes fournies à titre indicatif via des sources tierces.
+  </footer>
+  <script src="multisport_data.js"></script>
+  <script>
+    try{ if(typeof MULTISPORT!=='undefined'&&MULTISPORT.generated){ document.getElementById('upd').textContent='(dernière maj : '+MULTISPORT.generated+')'; } }catch(e){}
+  </script>
+</body>
+</html>

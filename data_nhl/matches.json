@@ -1,0 +1,4 @@
+[
+ {"id": 1, "date": "2026-06-15", "competition": "Stanley Cup Final G6", "home": "Vegas Golden Knights", "away": "Carolina Hurricanes",
+  "odds": {"ml_home": 2.02, "ml_away": 1.89, "total_line": 6.0, "over": 2.0, "under": 1.88, "est": false}}
+]

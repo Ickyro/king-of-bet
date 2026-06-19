@@ -1,0 +1,604 @@
+{
+ "sport": "basketball",
+ "sport_name": "Basket (NBA)",
+ "predictions": [
+  {
+   "id": 1,
+   "date": "2026-06-15",
+   "competition": "NBA Finals (DEMO)",
+   "home": "Thunder",
+   "away": "Pacers",
+   "pwin_home": 73.4,
+   "pwin_away": 26.6,
+   "margin": 7.5,
+   "total": 229.6,
+   "fh": 1.36,
+   "fa": 3.76,
+   "mkt": {
+    "ml_home": 1.45,
+    "ml_away": 2.85,
+    "total_line": 222.5,
+    "over": 1.9,
+    "under": 1.9,
+    "est": true
+   }
+  },
+  {
+   "id": 2,
+   "date": "2026-06-17",
+   "competition": "NBA Finals (DEMO)",
+   "home": "Pacers",
+   "away": "Thunder",
+   "pwin_home": 43.7,
+   "pwin_away": 56.3,
+   "margin": -1.9,
+   "total": 229.6,
+   "fh": 2.29,
+   "fa": 1.78,
+   "mkt": {
+    "ml_home": 2.1,
+    "ml_away": 1.74,
+    "total_line": 224.5,
+    "over": 1.91,
+    "under": 1.89,
+    "est": true
+   }
+  },
+  {
+   "id": 3,
+   "date": "2026-06-19",
+   "competition": "NBA (DEMO)",
+   "home": "Cavaliers",
+   "away": "Celtics",
+   "pwin_home": 60.7,
+   "pwin_away": 39.3,
+   "margin": 3.2,
+   "total": 228.8,
+   "fh": 1.65,
+   "fa": 2.54,
+   "mkt": {
+    "ml_home": 2.05,
+    "ml_away": 1.78,
+    "total_line": 225.5,
+    "over": 1.9,
+    "under": 1.9,
+    "est": true
+   }
+  }
+ ],
+ "values": [],
+ "ticket_batch": {
+  "_meta": {
+   "n_legs_pool": 12,
+   "opts": {
+    "profiles": [
+     "banker",
+     "value",
+     "jackpot",
+     "fun"
+    ],
+    "n_variants": 3,
+    "max_legs": 4,
+    "min_leg_odds": 1.12,
+    "max_leg_odds": 12.0,
+    "min_leg_prob": 0.12,
+    "jackpot_bands": [
+     10,
+     25,
+     50
+    ],
+    "markets": null,
+    "avoid_public": false,
+    "public_teams": [
+     "France",
+     "Brazil",
+     "England",
+     "USA",
+     "Mexico",
+     "Argentina"
+    ],
+    "must_team": null,
+    "bankroll": 100.0,
+    "exclude_est": false
+   }
+  },
+  "banker": [
+   {
+    "profile": "banker",
+    "title": "Banker — Single",
+    "legs": [
+     {
+      "label": "Thunder gagne (Thunder @ Pacers)",
+      "cote": 1.45,
+      "p": 69.4,
+      "edge": 0.7,
+      "market": "Moneyline",
+      "date": "2026-06-15",
+      "est": true,
+      "event_id": 1
+     }
+    ],
+    "cote": 1.45,
+    "p": 69.4,
+    "ev": 0.7,
+    "stake_pct": 0.5,
+    "stake": 0.5,
+    "payout": 0.72,
+    "risk": "Faible",
+    "n_legs": 1,
+    "id": "banker-0"
+   }
+  ],
+  "value": [
+   {
+    "profile": "value",
+    "title": "Value — Single",
+    "legs": [
+     {
+      "label": "Cavaliers gagne (Cavaliers @ Celtics)",
+      "cote": 2.05,
+      "p": 51.3,
+      "edge": 5.1,
+      "market": "Moneyline",
+      "date": "2026-06-19",
+      "est": true,
+      "event_id": 3
+     }
+    ],
+    "cote": 2.05,
+    "p": 51.3,
+    "ev": 5.1,
+    "stake_pct": 1.22,
+    "stake": 1.22,
+    "payout": 2.5,
+    "risk": "Modéré",
+    "n_legs": 1,
+    "id": "value-1"
+   },
+   {
+    "profile": "value",
+    "title": "Value — Duo",
+    "legs": [
+     {
+      "label": "Thunder gagne (Thunder @ Pacers)",
+      "cote": 1.45,
+      "p": 69.4,
+      "edge": 0.7,
+      "market": "Moneyline",
+      "date": "2026-06-15",
+      "est": true,
+      "event_id": 1
+     },
+     {
+      "label": "Cavaliers gagne (Cavaliers @ Celtics)",
+      "cote": 2.05,
+      "p": 51.3,
+      "edge": 5.1,
+      "market": "Moneyline",
+      "date": "2026-06-19",
+      "est": true,
+      "event_id": 3
+     }
+    ],
+    "cote": 2.97,
+    "p": 35.6,
+    "ev": 5.8,
+    "stake_pct": 0.73,
+    "stake": 0.73,
+    "payout": 2.17,
+    "risk": "Élevé",
+    "n_legs": 2,
+    "id": "value-2"
+   },
+   {
+    "profile": "value",
+    "title": "Value — Trio",
+    "legs": [
+     {
+      "label": "Thunder gagne (Thunder @ Pacers)",
+      "cote": 1.45,
+      "p": 69.4,
+      "edge": 0.7,
+      "market": "Moneyline",
+      "date": "2026-06-15",
+      "est": true,
+      "event_id": 1
+     }
+    ],
+    "cote": 1.45,
+    "p": 69.4,
+    "ev": 0.7,
+    "stake_pct": 0.5,
+    "stake": 0.5,
+    "payout": 0.72,
+    "risk": "Faible",
+    "n_legs": 1,
+    "id": "value-3"
+   }
+  ],
+  "jackpot": [
+   {
+    "profile": "jackpot",
+    "title": "Jackpot — cible x10",
+    "legs": [
+     {
+      "label": "Over 224.5 pts (Pacers @ Thunder)",
+      "cote": 1.91,
+      "p": 61.8,
+      "edge": 18.0,
+      "market": "Total",
+      "date": "2026-06-17",
+      "est": true,
+      "event_id": 2
+     },
+     {
+      "label": "Over 225.5 pts (Cavaliers @ Celtics)",
+      "cote": 1.9,
+      "p": 57.6,
+      "edge": 9.4,
+      "market": "Total",
+      "date": "2026-06-19",
+      "est": true,
+      "event_id": 3
+     },
+     {
+      "label": "Pacers gagne (Thunder @ Pacers)",
+      "cote": 2.85,
+      "p": 30.6,
+      "edge": -12.9,
+      "market": "Moneyline",
+      "date": "2026-06-15",
+      "est": true,
+      "event_id": 1
+     }
+    ],
+    "cote": 10.34,
+    "p": 10.9,
+    "ev": 12.5,
+    "stake_pct": 0.5,
+    "stake": 0.5,
+    "payout": 5.17,
+    "risk": "Très élevé",
+    "n_legs": 3,
+    "id": "jackpot-4"
+   }
+  ],
+  "fun": [
+   {
+    "profile": "fun",
+    "title": "Fun — Prop solo",
+    "legs": [
+     {
+      "label": "Over 222.5 pts (Thunder @ Pacers)",
+      "cote": 1.9,
+      "p": 66.2,
+      "edge": 25.8,
+      "market": "Total",
+      "date": "2026-06-15",
+      "est": true,
+      "event_id": 1
+     }
+    ],
+    "cote": 1.9,
+    "p": 66.2,
+    "ev": 25.8,
+    "stake_pct": 1.5,
+    "stake": 1.5,
+    "payout": 2.85,
+    "risk": "Faible",
+    "n_legs": 1,
+    "id": "fun-5"
+   },
+   {
+    "profile": "fun",
+    "title": "Fun — Combo x2",
+    "legs": [
+     {
+      "label": "Over 222.5 pts (Thunder @ Pacers)",
+      "cote": 1.9,
+      "p": 66.2,
+      "edge": 25.8,
+      "market": "Total",
+      "date": "2026-06-15",
+      "est": true,
+      "event_id": 1
+     },
+     {
+      "label": "Over 224.5 pts (Pacers @ Thunder)",
+      "cote": 1.91,
+      "p": 61.8,
+      "edge": 18.0,
+      "market": "Total",
+      "date": "2026-06-17",
+      "est": true,
+      "event_id": 2
+     }
+    ],
+    "cote": 3.63,
+    "p": 40.9,
+    "ev": 48.4,
+    "stake_pct": 1.5,
+    "stake": 1.5,
+    "payout": 5.45,
+    "risk": "Modéré",
+    "n_legs": 2,
+    "id": "fun-6"
+   },
+   {
+    "profile": "fun",
+    "title": "Fun — Combo x3",
+    "legs": [
+     {
+      "label": "Over 222.5 pts (Thunder @ Pacers)",
+      "cote": 1.9,
+      "p": 66.2,
+      "edge": 25.8,
+      "market": "Total",
+      "date": "2026-06-15",
+      "est": true,
+      "event_id": 1
+     },
+     {
+      "label": "Over 224.5 pts (Pacers @ Thunder)",
+      "cote": 1.91,
+      "p": 61.8,
+      "edge": 18.0,
+      "market": "Total",
+      "date": "2026-06-17",
+      "est": true,
+      "event_id": 2
+     },
+     {
+      "label": "Over 225.5 pts (Cavaliers @ Celtics)",
+      "cote": 1.9,
+      "p": 57.6,
+      "edge": 9.4,
+      "market": "Total",
+      "date": "2026-06-19",
+      "est": true,
+      "event_id": 3
+     }
+    ],
+    "cote": 6.9,
+    "p": 23.6,
+    "ev": 62.4,
+    "stake_pct": 1.06,
+    "stake": 1.06,
+    "payout": 7.31,
+    "risk": "Élevé",
+    "n_legs": 3,
+    "id": "fun-7"
+   }
+  ]
+ },
+ "ticket_pool": [
+  {
+   "event_id": 1,
+   "group_id": 1,
+   "date": "2026-06-15",
+   "sport": "basketball",
+   "competition": "NBA Finals (DEMO)",
+   "market": "Moneyline",
+   "is_core": true,
+   "sel": "Thunder",
+   "label": "Thunder gagne (Thunder @ Pacers)",
+   "cote": 1.45,
+   "p": 0.6942142697445759,
+   "p_model": 0.7340144709512999,
+   "p_market": 0.6727833921717244,
+   "edge": 0.006610691129635082,
+   "est": true,
+   "team": "Thunder",
+   "public": false
+  },
+  {
+   "event_id": 1,
+   "group_id": 1,
+   "date": "2026-06-15",
+   "sport": "basketball",
+   "competition": "NBA Finals (DEMO)",
+   "market": "Moneyline",
+   "is_core": true,
+   "sel": "Pacers",
+   "label": "Pacers gagne (Thunder @ Pacers)",
+   "cote": 2.85,
+   "p": 0.30578573025542416,
+   "p_model": 0.2659855290487001,
+   "p_market": 0.32721660782827555,
+   "edge": -0.1285106687720411,
+   "est": true,
+   "team": "Pacers",
+   "public": false
+  },
+  {
+   "event_id": 1,
+   "group_id": 1,
+   "date": "2026-06-15",
+   "sport": "basketball",
+   "competition": "NBA Finals (DEMO)",
+   "market": "Total",
+   "is_core": false,
+   "sel": "Over 222.5",
+   "label": "Over 222.5 pts (Thunder @ Pacers)",
+   "cote": 1.9,
+   "p": 0.6618974075575468,
+   "p_model": 0.6618974075575468,
+   "p_market": null,
+   "edge": 0.25760507435933877,
+   "est": true,
+   "team": null,
+   "public": false
+  },
+  {
+   "event_id": 1,
+   "group_id": 1,
+   "date": "2026-06-15",
+   "sport": "basketball",
+   "competition": "NBA Finals (DEMO)",
+   "market": "Total",
+   "is_core": false,
+   "sel": "Under 222.5",
+   "label": "Under 222.5 pts (Thunder @ Pacers)",
+   "cote": 1.9,
+   "p": 0.3381025924424532,
+   "p_model": 0.3381025924424532,
+   "p_market": null,
+   "edge": -0.35760507435933886,
+   "est": true,
+   "team": null,
+   "public": false
+  },
+  {
+   "event_id": 2,
+   "group_id": 2,
+   "date": "2026-06-17",
+   "sport": "basketball",
+   "competition": "NBA Finals (DEMO)",
+   "market": "Moneyline",
+   "is_core": true,
+   "sel": "Pacers",
+   "label": "Pacers gagne (Pacers @ Thunder)",
+   "cote": 2.1,
+   "p": 0.4451624722382319,
+   "p_model": 0.43709707160796013,
+   "p_market": 0.4495053802699167,
+   "edge": -0.06515880829971299,
+   "est": true,
+   "team": "Pacers",
+   "public": false
+  },
+  {
+   "event_id": 2,
+   "group_id": 2,
+   "date": "2026-06-17",
+   "sport": "basketball",
+   "competition": "NBA Finals (DEMO)",
+   "market": "Moneyline",
+   "is_core": true,
+   "sel": "Thunder",
+   "label": "Thunder gagne (Pacers @ Thunder)",
+   "cote": 1.74,
+   "p": 0.5548375277617681,
+   "p_model": 0.5629029283920399,
+   "p_market": 0.5504946197300833,
+   "edge": -0.03458270169452349,
+   "est": true,
+   "team": "Thunder",
+   "public": false
+  },
+  {
+   "event_id": 2,
+   "group_id": 2,
+   "date": "2026-06-17",
+   "sport": "basketball",
+   "competition": "NBA Finals (DEMO)",
+   "market": "Total",
+   "is_core": false,
+   "sel": "Over 224.5",
+   "label": "Over 224.5 pts (Pacers @ Thunder)",
+   "cote": 1.91,
+   "p": 0.6179114221889531,
+   "p_model": 0.6179114221889531,
+   "p_market": null,
+   "edge": 0.18021081638090042,
+   "est": true,
+   "team": null,
+   "public": false
+  },
+  {
+   "event_id": 2,
+   "group_id": 2,
+   "date": "2026-06-17",
+   "sport": "basketball",
+   "competition": "NBA Finals (DEMO)",
+   "market": "Total",
+   "is_core": false,
+   "sel": "Under 224.5",
+   "label": "Under 224.5 pts (Pacers @ Thunder)",
+   "cote": 1.89,
+   "p": 0.3820885778110469,
+   "p_model": 0.3820885778110469,
+   "p_market": null,
+   "edge": -0.2778525879371214,
+   "est": true,
+   "team": null,
+   "public": false
+  },
+  {
+   "event_id": 3,
+   "group_id": 3,
+   "date": "2026-06-19",
+   "sport": "basketball",
+   "competition": "NBA (DEMO)",
+   "market": "Moneyline",
+   "is_core": true,
+   "sel": "Cavaliers",
+   "label": "Cavaliers gagne (Cavaliers @ Celtics)",
+   "cote": 2.05,
+   "p": 0.5127267869186312,
+   "p_model": 0.6067403893192738,
+   "p_market": 0.4621040779336698,
+   "edge": 0.05108991318319389,
+   "est": true,
+   "team": "Cavaliers",
+   "public": false
+  },
+  {
+   "event_id": 3,
+   "group_id": 3,
+   "date": "2026-06-19",
+   "sport": "basketball",
+   "competition": "NBA (DEMO)",
+   "market": "Moneyline",
+   "is_core": true,
+   "sel": "Celtics",
+   "label": "Celtics gagne (Cavaliers @ Celtics)",
+   "cote": 1.78,
+   "p": 0.48727321308136873,
+   "p_model": 0.39325961068072623,
+   "p_market": 0.5378959220663301,
+   "edge": -0.1326536807151637,
+   "est": true,
+   "team": "Celtics",
+   "public": false
+  },
+  {
+   "event_id": 3,
+   "group_id": 3,
+   "date": "2026-06-19",
+   "sport": "basketball",
+   "competition": "NBA (DEMO)",
+   "market": "Total",
+   "is_core": false,
+   "sel": "Over 225.5",
+   "label": "Over 225.5 pts (Cavaliers @ Celtics)",
+   "cote": 1.9,
+   "p": 0.5758063313159705,
+   "p_model": 0.5758063313159705,
+   "p_market": null,
+   "edge": 0.09403202950034384,
+   "est": true,
+   "team": null,
+   "public": false
+  },
+  {
+   "event_id": 3,
+   "group_id": 3,
+   "date": "2026-06-19",
+   "sport": "basketball",
+   "competition": "NBA (DEMO)",
+   "market": "Total",
+   "is_core": false,
+   "sel": "Under 225.5",
+   "label": "Under 225.5 pts (Cavaliers @ Celtics)",
+   "cote": 1.9,
+   "p": 0.4241936686840295,
+   "p_model": 0.4241936686840295,
+   "p_market": null,
+   "edge": -0.19403202950034393,
+   "est": true,
+   "team": null,
+   "public": false
+  }
+ ]
+}

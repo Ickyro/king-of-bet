@@ -1,0 +1,8 @@
+[
+ {"id": 1, "date": "2026-06-15", "competition": "NBA Finals (DEMO)", "home": "Thunder", "away": "Pacers",
+  "odds": {"ml_home": 1.45, "ml_away": 2.85, "total_line": 222.5, "over": 1.90, "under": 1.90, "est": true}},
+ {"id": 2, "date": "2026-06-17", "competition": "NBA Finals (DEMO)", "home": "Pacers", "away": "Thunder",
+  "odds": {"ml_home": 2.10, "ml_away": 1.74, "total_line": 224.5, "over": 1.91, "under": 1.89, "est": true}},
+ {"id": 3, "date": "2026-06-19", "competition": "NBA (DEMO)", "home": "Cavaliers", "away": "Celtics",
+  "odds": {"ml_home": 2.05, "ml_away": 1.78, "total_line": 225.5, "over": 1.90, "under": 1.90, "est": true}}
+]

@@ -1,0 +1,4 @@
+# King of Bet — aucune dépendance externe.
+# Le moteur et le pipeline n'utilisent QUE la bibliothèque standard Python 3.12
+# (json, math, os, urllib, csv, datetime, subprocess, random…).
+# Rien à installer : GitHub Actions exécute directement les scripts.

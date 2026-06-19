@@ -1,0 +1,809 @@
+{
+ "_meta": {
+  "collecte": "13 juin 2026 (line shopping multi-sources : Oddspedia/1xbet, bet365, FanDuel, BetOnline/BetNow, Oddschecker, Kalshi)",
+  "note": "est=true : cote partiellement estimee. o25/btts majoritairement estimes : info seulement, pas de value dessus sauf si precise.",
+  "cartons_corners": "cards/corners ajoutes (est=true) pour 25 (Suisse-Bosnie) et 16 (France-Senegal) en demo ; l'agent cotes mettra de vraies lignes."
+ },
+ "2": {
+  "match": "Canada-Bosnia",
+  "h": 1.8,
+  "d": 3.8,
+  "a": 4.2,
+  "o25": 2.1,
+  "btts": 2.15,
+  "est": false,
+  "_note": "joue 12/06, score 1-1 - cloture non trouvee"
+ },
+ "3": {
+  "match": "USA-Paraguay",
+  "h": 2.0,
+  "d": 3.5,
+  "a": 4.1,
+  "o25": 2.2,
+  "btts": 2.1,
+  "est": false,
+  "_note": "joue 12/06, score 4-1 - cloture non trouvee"
+ },
+ "4": {
+  "match": "Qatar-Switzerland",
+  "h": 15.5,
+  "d": 7.0,
+  "a": 1.26,
+  "o25": 2.1,
+  "btts": 2.2,
+  "est": false,
+  "sources": [
+   {
+    "h": 15.5,
+    "d": 7.0,
+    "a": 1.26,
+    "w": 0.1
+   },
+   {
+    "h": 13.0,
+    "d": 7.0,
+    "a": 1.2,
+    "w": 0.1
+   }
+  ]
+ },
+ "5": {
+  "match": "Brazil-Morocco",
+  "h": 1.69,
+  "d": 4.0,
+  "a": 6.1,
+  "o25": 2.0,
+  "btts": 2.04,
+  "est": false,
+  "sources": [
+   {
+    "h": 1.667,
+    "d": 3.7,
+    "a": 5.6,
+    "w": 0.15
+   },
+   {
+    "h": 1.571,
+    "d": 4.0,
+    "a": 5.25,
+    "w": 0.15
+   },
+   {
+    "h": 1.69,
+    "d": 3.9,
+    "a": 5.5,
+    "w": 0.1
+   }
+  ]
+ },
+ "6": {
+  "match": "Haiti-Scotland",
+  "h": 7.5,
+  "d": 4.8,
+  "a": 1.615,
+  "o25": 2.05,
+  "btts": 2.1,
+  "est": false
+ },
+ "7": {
+  "match": "Australia-Turkey",
+  "h": 5.5,
+  "d": 3.9,
+  "a": 1.75,
+  "o25": 1.95,
+  "btts": 1.85,
+  "est": false
+ },
+ "8": {
+  "match": "Germany-Curacao",
+  "h": 1.05,
+  "d": 22.0,
+  "a": 55.0,
+  "o25": 1.3,
+  "btts": 3.0,
+  "est": false,
+  "sources": [
+   {
+    "h": 1.02,
+    "d": 22.0,
+    "a": 40.0,
+    "w": 0.15
+   },
+   {
+    "h": 1.03,
+    "d": 19.0,
+    "a": 34.0,
+    "w": 0.15
+   },
+   {
+    "h": 1.05,
+    "d": 16.5,
+    "a": 55.0,
+    "w": 0.1
+   }
+  ]
+ },
+ "9": {
+  "match": "Netherlands-Japan",
+  "h": 2.26,
+  "d": 2.88,
+  "a": 3.93,
+  "o25": 2.24,
+  "btts": 1.85,
+  "est": false,
+  "api": "the-odds-api",
+  "o25_under": 1.9,
+  "n_books": 1
+ },
+ "10": {
+  "match": "Ivory Coast-Ecuador",
+  "h": 3.38,
+  "d": 2.91,
+  "a": 2.65,
+  "o25": 3.05,
+  "btts": 2.05,
+  "est": false,
+  "api": "the-odds-api",
+  "o25_under": 1.41,
+  "n_books": 2
+ },
+ "11": {
+  "match": "Sweden-Tunisia",
+  "h": 1.96,
+  "d": 3.46,
+  "a": 4.5,
+  "o25": 2.17,
+  "btts": 2.1,
+  "est": false,
+  "_note": "cotes bet365 trouvees (Suede +500/Tunisie +1000) incoherentes avec un favori Suede - rejetees, conservation des cotes du 12/06",
+  "api": "the-odds-api",
+  "o25_under": 1.7,
+  "n_books": 2
+ },
+ "12": {
+  "match": "Spain-Cape Verde",
+  "h": 1.11,
+  "d": 11.78,
+  "a": 26.0,
+  "o25": 1.36,
+  "btts": 2.625,
+  "est": false,
+  "api": "the-odds-api",
+  "o25_under": 3.2,
+  "n_books": 2
+ },
+ "13": {
+  "match": "Belgium-Egypt",
+  "h": 1.67,
+  "d": 4.01,
+  "a": 5.75,
+  "o25": 2.04,
+  "btts": 2.0,
+  "est": false,
+  "api": "the-odds-api",
+  "o25_under": 1.86,
+  "n_books": 2
+ },
+ "14": {
+  "match": "Saudi Arabia-Uruguay",
+  "h": 7.7,
+  "d": 4.32,
+  "a": 1.5,
+  "o25": 2.06,
+  "btts": 2.15,
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "o25_under": 1.78
+ },
+ "15": {
+  "match": "Iran-New Zealand",
+  "h": 1.96,
+  "d": 3.4,
+  "a": 4.51,
+  "o25": 2.42,
+  "btts": 2.4,
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "o25_under": 1.58
+ },
+ "16": {
+  "match": "France-Senegal",
+  "h": 1.5,
+  "d": 4.49,
+  "a": 7.31,
+  "o25": 1.98,
+  "btts": 2.05,
+  "est": false,
+  "cards": {
+   "line": 4.5,
+   "over": 1.85,
+   "under": 1.95,
+   "est": true
+  },
+  "corners": {
+   "line": 9.5,
+   "over": 1.9,
+   "under": 1.9,
+   "est": true
+  },
+  "sources": [
+   {
+    "h": 1.44,
+    "d": 4.5,
+    "a": 7.0,
+    "w": 0.15
+   },
+   {
+    "h": 1.47,
+    "d": 4.6,
+    "a": 7.8,
+    "w": 0.15
+   },
+   {
+    "h": 1.45,
+    "d": 4.4,
+    "a": 6.5,
+    "w": 0.1
+   }
+  ],
+  "api": "the-odds-api",
+  "n_books": 2,
+  "o25_under": 1.91
+ },
+ "17": {
+  "match": "Iraq-Norway",
+  "h": 17.5,
+  "d": 7.53,
+  "a": 1.2,
+  "o25": 1.58,
+  "btts": 2.4,
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "o25_under": 2.42
+ },
+ "18": {
+  "match": "Argentina-Algeria",
+  "h": 1.42,
+  "d": 4.57,
+  "a": 9.6,
+  "o25": 2.01,
+  "btts": 2.2,
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "o25_under": 1.88
+ },
+ "19": {
+  "match": "Austria-Jordan",
+  "h": 1.35,
+  "d": 5.45,
+  "a": 9.65,
+  "o25": 1.69,
+  "btts": 2.45,
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "o25_under": 2.2
+ },
+ "20": {
+  "match": "Portugal-DR Congo",
+  "h": 1.33,
+  "d": 5.75,
+  "a": 11.22,
+  "o25": 1.73,
+  "btts": 2.3,
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "o25_under": 2.14
+ },
+ "21": {
+  "match": "England-Croatia",
+  "h": 1.75,
+  "d": 3.9,
+  "a": 5.07,
+  "o25": 2.15,
+  "btts": 1.95,
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "o25_under": 1.72
+ },
+ "22": {
+  "match": "Ghana-Panama",
+  "h": 2.2,
+  "d": 3.53,
+  "a": 3.51,
+  "o25": 2.27,
+  "btts": 2.2,
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "o25_under": 1.65
+ },
+ "23": {
+  "match": "Uzbekistan-Colombia",
+  "h": 9.65,
+  "d": 4.78,
+  "a": 1.4,
+  "o25": 1.97,
+  "btts": 2.0,
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "o25_under": 1.92
+ },
+ "24": {
+  "match": "Czechia-South Africa",
+  "h": 1.81,
+  "d": 3.9,
+  "a": 4.62,
+  "o25": 2.08,
+  "btts": 2.25,
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "o25_under": 1.77
+ },
+ "25": {
+  "match": "Switzerland-Bosnia",
+  "h": 1.61,
+  "d": 4.19,
+  "a": 6.25,
+  "o25": 2.09,
+  "btts": 2.2,
+  "est": false,
+  "cards": {
+   "line": 4.5,
+   "over": 1.85,
+   "under": 1.95,
+   "est": true
+  },
+  "corners": {
+   "line": 9.5,
+   "over": 1.9,
+   "under": 1.9,
+   "est": true
+  },
+  "api": "the-odds-api",
+  "n_books": 2,
+  "o25_under": 1.75
+ },
+ "26": {
+  "match": "Canada-Qatar",
+  "h": 1.3,
+  "d": 5.8,
+  "a": 12.4,
+  "o25": 1.8,
+  "btts": 2.6,
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "o25_under": 2.04
+ },
+ "27": {
+  "match": "Mexico-South Korea",
+  "h": 2.03,
+  "d": 3.42,
+  "a": 4.27,
+  "o25": 2.4,
+  "btts": 2.05,
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "o25_under": 1.59
+ },
+ "29": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.62,
+  "a": 5.68,
+  "d": 4.36,
+  "o25": 2.0,
+  "o25_under": 1.88
+ },
+ "28": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 5.12,
+  "a": 1.81,
+  "d": 3.68,
+  "o25": 2.22,
+  "o25_under": 1.68
+ },
+ "30": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.12,
+  "a": 25.0,
+  "d": 11.85
+ },
+ "31": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 2.08,
+  "a": 3.98,
+  "d": 3.41,
+  "o25": 2.17,
+  "o25_under": 1.71
+ },
+ "32": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.66,
+  "a": 5.48,
+  "d": 4.17,
+  "o25": 1.91,
+  "o25_under": 1.91
+ },
+ "33": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.58,
+  "a": 5.99,
+  "d": 4.39,
+  "o25": 1.8,
+  "o25_under": 2.04
+ },
+ "34": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.17,
+  "a": 21.0,
+  "d": 8.85
+ },
+ "35": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 5.73,
+  "a": 1.73,
+  "d": 3.67,
+  "o25": 2.19,
+  "o25_under": 1.7
+ },
+ "36": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.12,
+  "a": 30.0,
+  "d": 10.04
+ },
+ "37": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.42,
+  "a": 8.5,
+  "d": 4.88,
+  "o25": 1.91,
+  "o25_under": 1.97,
+  "match": "Belgium-Iran",
+  "btts": 2.1
+ },
+ "38": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.47,
+  "a": 7.7,
+  "d": 4.62,
+  "o25": 1.9,
+  "o25_under": 1.92
+ },
+ "39": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 5.07,
+  "a": 1.78,
+  "d": 3.82,
+  "o25": 2.22,
+  "o25_under": 1.68
+ },
+ "40": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.68,
+  "a": 5.79,
+  "d": 3.9,
+  "o25": 1.95,
+  "o25_under": 1.88
+ },
+ "41": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.14,
+  "a": 30.0,
+  "d": 8.45
+ },
+ "42": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 2.2,
+  "a": 3.48,
+  "d": 3.54,
+  "o25": 1.95,
+  "o25_under": 1.88
+ },
+ "43": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 7.01,
+  "a": 1.53,
+  "d": 4.32,
+  "o25": 1.92,
+  "o25_under": 1.9
+ },
+ "44": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.26,
+  "a": 14.2,
+  "d": 6.33,
+  "o25": 1.59,
+  "o25_under": 2.39
+ },
+ "45": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.33,
+  "a": 11.1,
+  "d": 5.43,
+  "o25": 1.72,
+  "o25_under": 2.15
+ },
+ "46": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 7.21,
+  "a": 1.57,
+  "d": 3.96,
+  "o25": 2.04,
+  "o25_under": 1.8
+ },
+ "47": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.48,
+  "a": 8.1,
+  "d": 4.37,
+  "o25": 2.15,
+  "o25_under": 1.72
+ },
+ "49": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.61,
+  "a": 6.5,
+  "d": 4.01,
+  "o25": 2.05,
+  "o25_under": 1.79
+ },
+ "48": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 2.19,
+  "a": 3.6,
+  "d": 3.44,
+  "o25": 2.11,
+  "o25_under": 1.75
+ },
+ "50": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 7.31,
+  "a": 1.46,
+  "d": 4.93,
+  "o25": 1.82,
+  "o25_under": 2.02
+ },
+ "51": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 1.33,
+  "a": 11.4,
+  "d": 5.33,
+  "o25": 1.63,
+  "o25_under": 2.31
+ },
+ "52": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 4.62,
+  "a": 1.87,
+  "d": 3.63,
+  "o25": 2.14,
+  "o25_under": 1.73
+ },
+ "53": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 2,
+  "h": 5.89,
+  "a": 1.65,
+  "d": 4.02,
+  "o25": 2.04,
+  "o25_under": 1.8
+ },
+ "55": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 14.71,
+  "a": 1.15,
+  "d": 7.54
+ },
+ "54": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 4.39,
+  "a": 1.75,
+  "d": 3.66,
+  "o25": 1.91,
+  "o25_under": 1.88
+ },
+ "56": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 2.04,
+  "a": 3.55,
+  "d": 3.4
+ },
+ "57": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 6.74,
+  "a": 1.43,
+  "d": 4.38,
+  "o25": 1.81,
+  "o25_under": 1.99
+ },
+ "59": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 2.07,
+  "a": 3.52,
+  "d": 3.34
+ },
+ "58": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 2.7,
+  "a": 2.39,
+  "d": 3.63,
+  "o25": 1.81,
+  "o25_under": 1.99
+ },
+ "60": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 4.16,
+  "a": 1.83,
+  "d": 3.55,
+  "o25": 1.97,
+  "o25_under": 1.82
+ },
+ "61": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 1.36,
+  "a": 7.89,
+  "d": 4.66,
+  "o25": 1.85,
+  "o25_under": 1.93
+ },
+ "62": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 2.4,
+  "a": 2.57,
+  "d": 3.85
+ },
+ "63": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 5.18,
+  "a": 1.61,
+  "d": 3.89,
+  "o25": 1.87,
+  "o25_under": 1.92
+ },
+ "65": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 9.32,
+  "a": 1.27,
+  "d": 5.6
+ },
+ "64": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 2.22,
+  "a": 3.55,
+  "d": 2.99
+ },
+ "67": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 1.6,
+  "a": 5.51,
+  "d": 3.78
+ },
+ "66": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 7.69,
+  "a": 1.26,
+  "d": 6.5
+ },
+ "68": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 3.48,
+  "a": 2.1,
+  "d": 3.29
+ },
+ "69": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 2.29,
+  "a": 3.06,
+  "d": 3.31
+ },
+ "70": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 3.71,
+  "a": 2.14,
+  "d": 3.03
+ },
+ "71": {
+  "est": false,
+  "api": "the-odds-api",
+  "n_books": 1,
+  "h": 13.38,
+  "a": 1.16,
+  "d": 7.16
+ }
+}

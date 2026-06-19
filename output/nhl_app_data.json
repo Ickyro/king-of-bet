@@ -1,0 +1,198 @@
+{
+ "sport": "nhl",
+ "sport_name": "NHL (hockey)",
+ "predictions": [
+  {
+   "id": 1,
+   "date": "2026-06-15",
+   "competition": "Stanley Cup Final G6",
+   "home": "Vegas Golden Knights",
+   "away": "Carolina Hurricanes",
+   "pwin_home": 50.0,
+   "pwin_away": 50.0,
+   "total": 6.3,
+   "margin": 0.0,
+   "fh": 2.0,
+   "fa": 2.0,
+   "mkt": {
+    "ml_home": 2.02,
+    "ml_away": 1.89,
+    "total_line": 6.0,
+    "over": 2.0,
+    "under": 1.88,
+    "est": false
+   }
+  }
+ ],
+ "values": [],
+ "ticket_batch": {
+  "_meta": {
+   "n_legs_pool": 4,
+   "opts": {
+    "profiles": [
+     "banker",
+     "value",
+     "jackpot",
+     "fun"
+    ],
+    "n_variants": 3,
+    "max_legs": 4,
+    "min_leg_odds": 1.12,
+    "max_leg_odds": 12.0,
+    "min_leg_prob": 0.12,
+    "jackpot_bands": [
+     10,
+     25,
+     50
+    ],
+    "markets": null,
+    "avoid_public": false,
+    "public_teams": [
+     "France",
+     "Brazil",
+     "England",
+     "USA",
+     "Mexico",
+     "Argentina"
+    ],
+    "must_team": null,
+    "bankroll": 100.0,
+    "exclude_est": false
+   }
+  },
+  "banker": [],
+  "value": [
+   {
+    "profile": "value",
+    "title": "Value — Single",
+    "legs": [
+     {
+      "label": "Vegas Golden Knights gagne (Carolina Hurricanes @ Vegas Golden Knights)",
+      "cote": 2.02,
+      "p": 48.9,
+      "edge": -1.3,
+      "market": "Moneyline",
+      "date": "2026-06-15",
+      "est": false,
+      "event_id": 1
+     }
+    ],
+    "cote": 2.02,
+    "p": 48.9,
+    "ev": -1.3,
+    "stake_pct": 0.5,
+    "stake": 0.5,
+    "payout": 1.01,
+    "risk": "Modéré",
+    "n_legs": 1,
+    "id": "value-0"
+   }
+  ],
+  "jackpot": [],
+  "fun": [
+   {
+    "profile": "fun",
+    "title": "Fun — Prop solo",
+    "legs": [
+     {
+      "label": "Over 6.0 buts (Carolina Hurricanes @ Vegas Golden Knights)",
+      "cote": 2.0,
+      "p": 44.2,
+      "edge": -11.7,
+      "market": "Total",
+      "date": "2026-06-15",
+      "est": false,
+      "event_id": 1
+     }
+    ],
+    "cote": 2.0,
+    "p": 44.2,
+    "ev": -11.7,
+    "stake_pct": 0.5,
+    "stake": 0.5,
+    "payout": 1.0,
+    "risk": "Modéré",
+    "n_legs": 1,
+    "id": "fun-1"
+   }
+  ]
+ },
+ "ticket_pool": [
+  {
+   "event_id": 1,
+   "group_id": 1,
+   "date": "2026-06-15",
+   "sport": "nhl",
+   "competition": "Stanley Cup Final G6",
+   "market": "Moneyline",
+   "is_core": true,
+   "sel": "Vegas Golden Knights",
+   "label": "Vegas Golden Knights gagne (Carolina Hurricanes @ Vegas Golden Knights)",
+   "cote": 2.02,
+   "p": 0.48880907327134127,
+   "p_model": 0.49999999999999994,
+   "p_market": 0.48278318964821737,
+   "edge": -0.012605671991890666,
+   "est": false,
+   "team": "Vegas Golden Knights",
+   "public": false
+  },
+  {
+   "event_id": 1,
+   "group_id": 1,
+   "date": "2026-06-15",
+   "sport": "nhl",
+   "competition": "Stanley Cup Final G6",
+   "market": "Moneyline",
+   "is_core": true,
+   "sel": "Carolina Hurricanes",
+   "label": "Carolina Hurricanes gagne (Carolina Hurricanes @ Vegas Golden Knights)",
+   "cote": 1.89,
+   "p": 0.5111909267286587,
+   "p_model": 0.5,
+   "p_market": 0.5172168103517827,
+   "edge": -0.033849148482835045,
+   "est": false,
+   "team": "Carolina Hurricanes",
+   "public": false
+  },
+  {
+   "event_id": 1,
+   "group_id": 1,
+   "date": "2026-06-15",
+   "sport": "nhl",
+   "competition": "Stanley Cup Final G6",
+   "market": "Total",
+   "is_core": false,
+   "sel": "Over 6.0",
+   "label": "Over 6.0 buts (Carolina Hurricanes @ Vegas Golden Knights)",
+   "cote": 2.0,
+   "p": 0.4416418773536493,
+   "p_model": 0.4416418773536493,
+   "p_market": null,
+   "edge": -0.11671624529270141,
+   "est": false,
+   "team": null,
+   "public": false
+  },
+  {
+   "event_id": 1,
+   "group_id": 1,
+   "date": "2026-06-15",
+   "sport": "nhl",
+   "competition": "Stanley Cup Final G6",
+   "market": "Total",
+   "is_core": false,
+   "sel": "Under 6.0",
+   "label": "Under 6.0 buts (Carolina Hurricanes @ Vegas Golden Knights)",
+   "cote": 1.88,
+   "p": 0.3988610202462155,
+   "p_model": 0.3988610202462155,
+   "p_market": null,
+   "edge": -0.25014128193711493,
+   "est": false,
+   "team": null,
+   "public": false
+  }
+ ]
+}

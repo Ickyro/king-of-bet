@@ -1,0 +1,83 @@
+[
+ {
+  "id": 1,
+  "date": "2026-06-16",
+  "competition": "WNBA",
+  "home": "Dallas Wings",
+  "away": "Las Vegas Aces",
+  "odds": {
+   "ml_home": 2.4,
+   "ml_away": 1.65,
+   "total_line": 177.0,
+   "over": 1.89,
+   "under": 1.96,
+   "est": false,
+   "n_books": 3,
+   "shop": {
+    "ml_home": "pinnacle",
+    "ml_away": "draftkings"
+   },
+   "sharp": {
+    "ml_home": 2.4,
+    "ml_away": 1.61,
+    "total_line": 177.0,
+    "over": 1.89,
+    "under": 1.96
+   }
+  }
+ },
+ {
+  "id": 2,
+  "date": "2026-06-16",
+  "competition": "WNBA",
+  "home": "Minnesota Lynx",
+  "away": "Portland Fire",
+  "odds": {
+   "ml_home": 1.12,
+   "ml_away": 8.75,
+   "total_line": 168.5,
+   "over": 1.91,
+   "under": 1.94,
+   "est": false,
+   "n_books": 3,
+   "shop": {
+    "ml_home": "fanduel",
+    "ml_away": "pinnacle"
+   },
+   "sharp": {
+    "ml_home": 1.09,
+    "ml_away": 8.75,
+    "total_line": 168.5,
+    "over": 1.91,
+    "under": 1.94
+   }
+  }
+ },
+ {
+  "id": 3,
+  "date": "2026-06-16",
+  "competition": "WNBA",
+  "home": "Golden State Valkyries",
+  "away": "Los Angeles Sparks",
+  "odds": {
+   "ml_home": 1.48,
+   "ml_away": 2.85,
+   "total_line": 173.5,
+   "over": 1.99,
+   "under": 1.86,
+   "est": false,
+   "n_books": 3,
+   "shop": {
+    "ml_home": "pinnacle",
+    "ml_away": "draftkings"
+   },
+   "sharp": {
+    "ml_home": 1.48,
+    "ml_away": 2.76,
+    "total_line": 173.5,
+    "over": 1.99,
+    "under": 1.86
+   }
+  }
+ }
+]

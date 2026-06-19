@@ -1,0 +1,45 @@
+{
+ "n": 24,
+ "brier_model": 0.6562,
+ "brier_uniform": 0.6667,
+ "logloss": 1.0547,
+ "hit_rate": 50.0,
+ "reliability": [
+  {
+   "lo": 0.0,
+   "hi": 0.2,
+   "p_pred": 13.3,
+   "p_emp": 21.4,
+   "n": 28
+  },
+  {
+   "lo": 0.2,
+   "hi": 0.4,
+   "p_pred": 24.3,
+   "p_emp": 30.0,
+   "n": 20
+  },
+  {
+   "lo": 0.4,
+   "hi": 0.6,
+   "p_pred": 52.6,
+   "p_emp": 50.0,
+   "n": 8
+  },
+  {
+   "lo": 0.6,
+   "hi": 0.8,
+   "p_pred": 67.4,
+   "p_emp": 53.8,
+   "n": 13
+  },
+  {
+   "lo": 0.8,
+   "hi": 1.0,
+   "p_pred": 81.2,
+   "p_emp": 33.3,
+   "n": 3
+  }
+ ],
+ "note": "WC (foot) — proba_log ∩ résultats"
+}

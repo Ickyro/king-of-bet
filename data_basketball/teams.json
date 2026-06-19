@@ -1,0 +1,35 @@
+{
+ "_meta": "NBA 2025-26 TERMINÉE (Knicks champions, ont battu les Spurs). Plus de match NBA avant octobre 2026 → pas de cotes live (The Odds API : basketball_nba inactif ; WNBA active si on veut du basket live). Données ci-dessous = démo, modèle prêt pour la reprise.",
+ "Thunder": {
+  "ppg": 119.2,
+  "oppg": 107.5
+ },
+ "Pacers": {
+  "ppg": 117.4,
+  "oppg": 115.1
+ },
+ "Celtics": {
+  "ppg": 116.3,
+  "oppg": 108.2
+ },
+ "Nuggets": {
+  "ppg": 118.0,
+  "oppg": 111.6
+ },
+ "Timberwolves": {
+  "ppg": 113.0,
+  "oppg": 106.5
+ },
+ "Knicks": {
+  "ppg": 115.8,
+  "oppg": 110.9
+ },
+ "Cavaliers": {
+  "ppg": 121.0,
+  "oppg": 112.0
+ },
+ "Mavericks": {
+  "ppg": 116.2,
+  "oppg": 113.4
+ }
+}

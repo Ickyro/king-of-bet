@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🏆 King of Bet — Hub Multi-Sports</title>
+<style>
+:root{--bg:#0d1117;--bg2:#161b22;--bg3:#21262d;--border:#30363d;--txt:#e6edf3;--mut:#a9b4c0;
+--green:#3fb950;--red:#f85149;--gold:#d29922;--blue:#58a6ff;--purple:#bc8cff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
+header{background:linear-gradient(135deg,#1a2332,#0d1421);padding:16px 24px;border-bottom:2px solid var(--gold);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+header h1{font-size:1.3em;color:var(--gold)}
+header .sub{color:var(--mut);font-size:.82em}
+.bankroll{display:flex;align-items:center;gap:8px;background:var(--bg3);padding:8px 14px;border-radius:8px;border:1px solid var(--border)}
+.bankroll input{width:84px;background:var(--bg);color:var(--gold);border:1px solid var(--border);border-radius:6px;padding:5px 8px;font-size:1em;text-align:right}
+.stats{display:flex;gap:18px;padding:10px 24px;background:var(--bg2);border-bottom:1px solid var(--border);flex-wrap:wrap;font-size:.85em;color:var(--mut)}
+.stats b{color:var(--txt);font-size:1.1em}
+nav{display:flex;gap:6px;padding:12px 24px;background:var(--bg2);border-bottom:1px solid var(--border);flex-wrap:wrap}
+nav button{background:var(--bg3);border:1px solid var(--border);color:var(--mut);padding:8px 16px;cursor:pointer;font-size:.95em;border-radius:10px;font-weight:600}
+nav button.on{color:#000;background:var(--gold);border-color:var(--gold)}
+nav .lnk{color:var(--blue);text-decoration:none;align-self:center;margin-left:auto;font-size:.88em}
+main{padding:20px 24px;max-width:1180px;margin:0 auto}
+.sec{font-size:1.08em;font-weight:700;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+.sec .muted{font-weight:400;font-size:.72em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:14px}
+.mcard{cursor:pointer}.mcard:hover{border-color:var(--gold)}
+.match-h{display:flex;justify-content:space-between;font-size:.95em;font-weight:600;margin-bottom:8px}
+.match-h .d{color:var(--mut);font-weight:400;font-size:.85em}
+.pb{margin:5px 0}.pb-l{display:flex;justify-content:space-between;font-size:.85em;margin-bottom:2px}
+.pb-bar{height:9px;border-radius:5px;background:var(--bg3);overflow:hidden}.pb-bar div{height:100%;border-radius:5px}
+.note{color:var(--mut);font-size:.82em;margin-top:8px}
+.detail{margin-top:10px;padding-top:8px;border-top:1px solid var(--border);font-size:.85em}
+.ticket{border-left:4px solid var(--gold)}
+.ticket.banker{border-left-color:var(--green)}.ticket.value{border-left-color:var(--gold)}
+.ticket.jackpot{border-left-color:var(--purple)}.ticket.fun{border-left-color:var(--red)}
+.ticket h3{font-size:.93em;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.78em;font-weight:600;background:var(--bg3)}
+.leg{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed #2a3038;font-size:.88em}
+.leg:last-child{border-bottom:none}
+.statrow{display:flex;justify-content:space-around;flex-wrap:wrap;margin-top:8px}
+.stat{text-align:center;padding:4px}.stat .v{font-size:1.12em;font-weight:700}.stat .m{color:var(--mut);font-size:.72em}
+.toprow{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #20262e}
+.toprow .bar{flex:1;height:10px;background:var(--bg3);border-radius:5px;overflow:hidden}
+.toprow .bar div{height:100%;background:linear-gradient(90deg,var(--gold),var(--green))}
+.pos{color:var(--green)}.neg{color:var(--red)}.muted{color:var(--mut)}
+.warn{background:#2d1b08;border:1px solid #6b4a12;border-radius:10px;padding:10px 14px;margin:14px 0;font-size:.85em;color:#e0b35c}
+@media(max-width:640px){main{padding:12px}.stats{gap:12px}}
+.mcard{transition:transform .12s,border-color .12s}.mcard:hover{transform:translateY(-2px)}
+.pb-bar div{background-image:linear-gradient(90deg,rgba(255,255,255,.18),transparent)}
+.sumrow{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.scard{flex:1;min-width:108px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center}
+.scard .v{font-size:1.3em;font-weight:700}.scard .m{color:var(--mut);font-size:.74em;margin-top:2px}
+.ckh{font-weight:600;font-size:.9em;margin-bottom:8px}
+svg text{font-family:inherit}
+.badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:.72em;font-weight:700;vertical-align:middle;margin-left:8px}
+.badge.live{background:rgba(63,185,80,.16);color:var(--green);border:1px solid rgba(63,185,80,.4)}
+.badge.demo{background:var(--bg3);color:var(--mut);border:1px solid var(--border)}
+nav button{position:relative}
+nav button .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.shead{display:flex;align-items:center;gap:10px;font-size:1.15em;font-weight:700;margin:4px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--accent,var(--gold))}
+.shead .ic{font-size:1.3em}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px}
+.mcard{cursor:pointer}
+.edge-hi{color:var(--green);background:rgba(63,185,80,.14);padding:1px 7px;border-radius:10px;font-weight:700}
+.edge-md{color:var(--gold);background:rgba(210,153,34,.13);padding:1px 7px;border-radius:10px;font-weight:600}
+.edge-lo{color:var(--mut)}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+  <div><h1>🏆 KING OF BET — Hub Multi-Sports</h1><div class="sub">données du <span id="gen"></span> · même moteur (Elo/blend/Kelly) pour tous les sports</div></div>
+  <div class="bankroll">💰 Bankroll <input type="number" id="bk" value="100" min="1" step="10"> €</div>
+</header>
+<div class="stats" id="stats"></div>
+<nav id="nav"></nav>
+<main id="main"></main>
+<script src="multisport_data.js"></script>
+<script>
+const D = (typeof MULTISPORT!=='undefined') ? MULTISPORT : {order:[],sports:{}};
+document.getElementById('gen').textContent = D.generated || '—';
+const bkEl = document.getElementById('bk');
+bkEl.value = localStorage.getItem('kob_bk') || 100;
+bkEl.onchange = ()=>{localStorage.setItem('kob_bk',bkEl.value);render();};
+const BK = ()=>parseFloat(bkEl.value)||100;
+const ICON = {football:'⚽',football_clubs:'🏆',tennis:'🎾',basketball:'🏀',wnba:'⛹️‍♀️',nfl:'🏈',nhl:'🏒'};
+const ACCENT = {football:'#58a6ff',football_clubs:'#d29922',tennis:'#3fb950',basketball:'#ff7b72',wnba:'#f778ba',nfl:'#a371f7',nhl:'#39c5cf'};
+const AC = k=>ACCENT[k]||'var(--gold)';
+const isLive = k=>!!(D.sports[k]&&D.sports[k].live);
+const liveBadge = k=>isLive(k)
+  ? '<span class="badge live">● cotes réelles</span>'
+  : '<span class="badge demo">○ démo</span>';
+// Échappement HTML — toute donnée (noms d'équipes/joueurs venant d'API) passe par ici avant innerHTML
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+// Palier de couleur du edge (lisibilité métier : repérer une vraie value d'un coup d'œil)
+const edgeCls = e => e>=8 ? 'edge-hi' : (e>=3 ? 'edge-md' : 'edge-lo');
+const PCLS = {banker:'banker',value:'value',jackpot:'jackpot',fun:'fun'};
+const PNAME = {banker:'🟢 Banker',value:'🟡 Value',jackpot:'🟣 Jackpot',fun:'🔴 Fun'};
+const PCOL = ['var(--green)','var(--mut)','var(--red)','var(--blue)','var(--purple)','var(--gold)'];
+let CUR = '_top';
+const OPEN = {};  // détails ouverts
+
+function statStrip(){
+  let ev=0,tk=0;(D.order||[]).forEach(k=>{const s=D.sports[k];ev+=s.n_events;
+    ['banker','value','jackpot','fun'].forEach(p=>tk+=(s.tickets[p]||[]).length);});
+  document.getElementById('stats').innerHTML=
+    `<span><b>${(D.order||[]).length}</b> sports</span><span><b>${ev}</b> événements à venir</span><span><b>${tk}</b> tickets générés</span><span class="muted">paris virtuels · probabilités ≠ certitudes</span>`;
+}
+function nav(){
+  let h=`<button class="${CUR==='_top'?'on':''}" onclick="sel('_top')">🔥 Top</button>`;
+  h+=`<button class="${CUR==='_perf'?'on':''}" onclick="sel('_perf')">📈 Perf</button>`;
+  h+=(D.order||[]).map(k=>`<button class="${k===CUR?'on':''}" onclick="sel('${k}')"><span class="dot" style="background:${isLive(k)?'var(--green)':'var(--border)'}"></span>${ICON[k]||''} ${esc(D.sports[k].name)}</button>`).join('');
+  h+=`<a class="lnk" href="WorldcupKingOfBet.html">↗ App World Cup complète</a>`;
+  document.getElementById('nav').innerHTML=h;
+}
+function sel(k){CUR=k;render();}
+
+function probBars(probs){
+  return probs.map((pr,i)=>`<div class="pb"><div class="pb-l"><span>${esc(pr[0])}</span><span>${pr[1]}%</span></div>
+    <div class="pb-bar"><div style="width:${Math.max(2,pr[1])}%;background:${PCOL[i%PCOL.length]}"></div></div></div>`).join('');
+}
+function svgBars(items){
+  const mx=Math.max.apply(null,items.map(i=>i.val).concat([1]));const H=items.length*26+6;
+  return `<svg viewBox="0 0 340 ${H}" style="width:100%;max-width:540px">`+items.map((it,i)=>{
+    const w=Math.max(3,it.val/mx*200),y=i*26+4;
+    return `<text x="0" y="${y+13}" fill="var(--mut)" font-size="11">${it.label}</text>`+
+      `<rect x="96" y="${y+4}" width="${w}" height="13" rx="3" fill="${it.col||'var(--gold)'}"/>`+
+      `<text x="${96+w+6}" y="${y+14}" fill="var(--txt)" font-size="11">${it.val}</text>`;}).join('')+`</svg>`;
+}
+function linkedTickets(sk,id){
+  const s=D.sports[sk],out=[];
+  ['banker','value','jackpot','fun'].forEach(p=>(s.tickets[p]||[]).forEach(t=>{
+    if(t.legs.some(l=>l.event_id===id)) out.push(`<div class="leg"><span><span class="tag">${PNAME[p].slice(0,2)}</span> ${esc(t.title)}</span><span><b>${(+t.cote).toFixed(2)}</b> · ${t.p}%</span></div>`);}));
+  return out.length?out.join(''):'<div class="muted">Aucun ticket ne référence ce match.</div>';
+}
+function matchCard(sk,r){
+  const op=OPEN[sk+'-'+r.id];
+  return `<div class="card mcard" role="button" tabindex="0" aria-expanded="${op?'true':'false'}" onclick="toggle('${sk}',${r.id})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggle('${sk}',${r.id})}"><div class="match-h"><span>${esc(r.title)}</span><span class="d">${(r.date||'').slice(5)}</span></div>
+    ${probBars(r.probs)}${r.note?`<div class="note">${r.note}</div>`:''}
+    ${op?`<div class="detail">${r.rat?`<div class="muted" style="margin-bottom:6px">⚖️ ${esc(r.rlab||'Force')} : ${esc(r.rat[0][0])} <b>${r.rat[0][1]}</b> &nbsp;vs&nbsp; ${esc(r.rat[1][0])} <b>${r.rat[1][1]}</b></div>`:''}<div class="muted" style="margin-bottom:4px">🎫 Tickets liés</div>${linkedTickets(sk,r.id)}</div>`:'<div class="muted" style="font-size:.78em;margin-top:6px">▸ cliquer pour les tickets liés</div>'}</div>`;
+}
+function toggle(sk,id){const k=sk+'-'+id;OPEN[k]=!OPEN[k];render();}
+
+function ticketCard(t){
+  const cls=PCLS[t.profile]||'value', mise=BK()*t.stake_pct/100, gain=mise*t.cote, ev=t.ev>=0?'pos':'neg';
+  return `<div class="card ticket ${cls}"><h3>${esc(t.title)} <span class="tag">cote ${(+t.cote).toFixed(2)}</span></h3>
+    ${t.legs.map(l=>`<div class="leg"><span>${esc(l.label)}${l.est?' <span class="tag">est.</span>':''}</span><span><b>${l.cote}</b> <span class="muted">${l.p}%</span></span></div>`).join('')}
+    <div class="statrow">
+      <div class="stat"><div class="v">${t.p}%</div><div class="m">proba</div></div>
+      <div class="stat"><div class="v ${ev}">${t.ev>=0?'+':''}${t.ev}%</div><div class="m">EV</div></div>
+      <div class="stat"><div class="v">${mise.toFixed(2)}€</div><div class="m">mise</div></div>
+      <div class="stat"><div class="v pos">${gain.toFixed(2)}€</div><div class="m">gain pot.</div></div>
+      <div class="stat"><div class="v">${t.risk}</div><div class="m">risque</div></div>
+    </div></div>`;
+}
+function renderTop(){
+  let all=[];(D.order||[]).forEach(k=>(D.sports[k].top||[]).forEach(o=>all.push(Object.assign({sport:k},o))));
+  all.sort((a,b)=>b.edge-a.edge);all=all.slice(0,20);
+  const mx=all.length?all[0].edge:1;
+  const rows=all.map(o=>`<div class="toprow"><span class="tag" style="border:1px solid ${AC(o.sport)};color:${AC(o.sport)}">${ICON[o.sport]||''}</span>
+    <span style="flex:0 0 42%">${esc(o.label)}${o.est?' <span class="tag">est.</span>':'<span class="badge live" style="margin-left:6px;padding:1px 6px">réel</span>'}</span>
+    <div class="bar"><div style="width:${Math.max(4,o.edge/mx*100)}%;background:linear-gradient(90deg,${AC(o.sport)},var(--green))"></div></div>
+    <span class="${o.edge>=0?edgeCls(o.edge):'neg'}" style="width:62px;text-align:right">${o.edge>=0?'+':''}${o.edge}%</span>
+    <span class="muted" style="width:54px;text-align:right">@${o.cote}</span></div>`).join('');
+  const ov=(D.order||[]).map(k=>({label:(ICON[k]||'')+' '+D.sports[k].name,val:D.sports[k].n_events,col:AC(k)}));
+  return `<div class="card"><div class="ckh">📊 Événements à venir par sport</div>${svgBars(ov)}</div>
+    <div class="warn">🔥 Meilleures opportunités <b>tous sports confondus</b> (edge modèle vs marché, 0–20% ; les cotes « est. » sont indicatives tant qu'aucune cote réelle n'est branchée).</div>
+    <div class="card">${rows||"<div class='muted'>Aucune opportunité — branche de vraies cotes via une API pour activer les edges.</div>"}</div>`;
+}
+function equitySvg(pts,pl){
+  if(!pts||pts.length<2) return '<div class="muted">Pas encore assez de paris réglés pour tracer la courbe.</div>';
+  const W=600,H=160,mn=Math.min(0,...pts),mx=Math.max(0,...pts),rg=(mx-mn)||1;
+  const xy=pts.map((v,i)=>`${(i/(pts.length-1)*W).toFixed(1)},${(H-((v-mn)/rg*H)).toFixed(1)}`).join(' ');
+  const zero=H-((0-mn)/rg*H);
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:170px"><line x1="0" y1="${zero}" x2="${W}" y2="${zero}" stroke="var(--border)" stroke-dasharray="4"/><polyline points="${xy}" fill="none" stroke="${pl>=0?'var(--green)':'var(--red)'}" stroke-width="2.5"/></svg>`;
+}
+function perfCards(pf,extra){
+  let h=`<div class="sumrow">
+    <div class="scard"><div class="v ${pf.pl>=0?'pos':'neg'}">${pf.pl>=0?'+':''}${(pf.pl||0).toFixed(2)}€</div><div class="m">P/L</div></div>
+    <div class="scard"><div class="v ${pf.roi>=0?'pos':'neg'}">${pf.roi||0}%</div><div class="m">ROI</div></div>
+    <div class="scard"><div class="v">${(pf.staked||0).toFixed(2)}€</div><div class="m">misé</div></div>
+    <div class="scard"><div class="v">${pf.n||0}</div><div class="m">paris réglés</div></div>`;
+  if(extra){
+    h+=`<div class="scard"><div class="v ${pf.clv!=null?(pf.clv>=0?'pos':'neg'):''}">${pf.clv!=null?(pf.clv>=0?'+':'')+pf.clv+'%':'—'}</div><div class="m">CLV moyen</div></div>
+    <div class="scard"><div class="v">${pf.pending||0}</div><div class="m">en attente</div></div>`;
+  }else{
+    h+=`<div class="scard"><div class="v">${pf.bankroll!=null?(+pf.bankroll).toFixed(2)+'€':'—'}</div><div class="m">bankroll</div></div>`;
+  }
+  return h+'</div>';
+}
+function clvTable(bets){
+  if(!bets||!bets.length) return '';
+  return `<div class="card"><div class="ckh">🎯 CLV par pari (cote prise vs clôture)</div><div style="font-size:.86em">`+
+    bets.map(b=>`<div class="leg"><span>${ICON[b.sport]||''} ${esc(b.sel)}</span><span>@${(+b.cote).toFixed(2)} · ${b.clv!=null?`<b class="${b.clv>=0?'pos':'neg'}">${b.clv>=0?'+':''}${b.clv}%</b>`:'<span class="muted">en attente</span>'} · ${b.status}</span></div>`).join('')+
+    `</div></div>`;
+}
+function reliabSvg(rel){
+  if(!rel||!rel.length) return '<div class="muted">Pas encore de données de fiabilité.</div>';
+  const W=320,H=320,P=34,ix=v=>P+v/100*(W-2*P),iy=v=>H-P-v/100*(H-2*P);
+  const dots=rel.map(b=>`<circle cx="${ix(b.p_pred).toFixed(1)}" cy="${iy(b.p_emp).toFixed(1)}" r="${Math.min(11,3+b.n/2).toFixed(1)}" fill="var(--blue)" opacity="0.82"><title>prévu ${b.p_pred}% · réel ${b.p_emp}% (n=${b.n})</title></circle>`).join('');
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;max-width:340px">
+    <line x1="${ix(0)}" y1="${iy(0)}" x2="${ix(100)}" y2="${iy(100)}" stroke="var(--mut)" stroke-dasharray="5"/>
+    <line x1="${P}" y1="${P}" x2="${P}" y2="${H-P}" stroke="var(--border)"/>
+    <line x1="${P}" y1="${H-P}" x2="${W-P}" y2="${H-P}" stroke="var(--border)"/>
+    ${dots}
+    <text x="${W/2}" y="${H-8}" fill="var(--mut)" font-size="11" text-anchor="middle">proba prévue %</text>
+    <text x="14" y="${H/2}" fill="var(--mut)" font-size="11" transform="rotate(-90 14 ${H/2})" text-anchor="middle">fréquence réelle %</text></svg>`;
+}
+function renderPerf(){
+  const pf=D.perf||{points:[]};
+  let h=`<div class="sec">⚽ Agent parieur Coupe du Monde <span class="muted">— paris virtuels 1N2/buteurs/cartons</span></div>`;
+  h+=perfCards(pf,false);
+  h+=`<div class="card"><div class="ckh">📈 Courbe P/L (cumulée, paris réglés)</div>${equitySvg(pf.points,pf.pl||0)}
+    <div class="muted" style="margin-top:6px">Métrique de vérité = CLV + ROI sur la durée. Échantillon encore petit : la variance domine au début.</div></div>`;
+  const pm=D.perf_multi;
+  if(pm){
+    h+=`<div class="sec">⛹️‍♀️🏒 Ledger live multi-sports <span class="muted">— value bets auto sur cotes réelles (WNBA/NHL…), hors WC</span></div>`;
+    if((pm.n||0)===0 && (pm.pending||0)===0){
+      h+=`<div class="warn">Aucun pari placé pour l'instant : sur les sports à cotes réelles, le moteur n'ouvre une position que si l'edge discipliné (3–15%) apparaît. Le ledger se remplira au fil des slates.</div>`;
+    }else{
+      h+=perfCards(pm,true);
+      h+=`<div class="card"><div class="ckh">📈 Courbe P/L live multi-sports (cumulée)</div>${equitySvg(pm.points,pm.pl||0)}
+        <div class="muted" style="margin-top:6px">${pm.pending||0} pari(s) en attente. Mise = quart de Kelly plafonnée à 5% de bankroll. CLV = cote prise / cote de clôture − 1 (snapshot auto avant le coup d'envoi).</div></div>`;
+    }
+    h+=clvTable(pm.bets);
+  }
+  const cal=D.calib;
+  if(cal&&cal.n){
+    const better=cal.brier_model<cal.brier_uniform;
+    h+=`<div class="sec">🎯 Calibration du modèle <span class="muted">— foot WC, ${cal.n} matchs réglés</span></div>
+      <div class="sumrow">
+        <div class="scard"><div class="v ${better?'pos':'neg'}">${cal.brier_model}</div><div class="m">Brier modèle</div></div>
+        <div class="scard"><div class="v">${cal.brier_uniform}</div><div class="m">Brier hasard</div></div>
+        <div class="scard"><div class="v">${cal.hit_rate}%</div><div class="m">issue n°1 sortie</div></div>
+        <div class="scard"><div class="v">${cal.logloss}</div><div class="m">log-loss</div></div></div>
+      <div class="card"><div class="ckh">Courbe de fiabilité — diagonale = parfait ; sous la diagonale = surconfiance</div>${reliabSvg(cal.reliability)}
+      <div class="muted" style="margin-top:6px">n=${cal.n} (petit échantillon, slate très nulle) : le modèle est pour l'instant sur-confiant sur les favoris et sous-pondère les nuls. Indicatif — se stabilise avec le volume.</div></div>`;
+  }
+  return h;
+}
+function render(){
+  statStrip();nav();
+  const m=document.getElementById('main');
+  if(!(D.order||[]).length){m.innerHTML='<div class="warn">Aucune donnée. Lance <b>python run_all.py</b> pour générer multisport_data.js.</div>';return;}
+  if(CUR==='_top'){m.innerHTML=renderTop();return;}
+  if(CUR==='_perf'){m.innerHTML=renderPerf();return;}
+  const s=D.sports[CUR],profs=['banker','value','jackpot','fun'];
+  let tickets='';
+  profs.forEach(p=>{const arr=(s.tickets&&s.tickets[p])||[];if(!arr.length)return;
+    tickets+=`<div class="sec">${PNAME[p]} <span class="muted">— ${arr.length}</span></div><div class="grid">${arr.map(ticketCard).join('')}</div>`;});
+  const tks=['banker','value','jackpot','fun'].reduce((n,p)=>n+((s.tickets[p]||[]).length),0);
+  const be=(s.top&&s.top[0])?s.top[0].edge:0;
+  m.innerHTML=`<div class="shead" style="--accent:${AC(CUR)}"><span class="ic">${ICON[CUR]||''}</span><span>${esc(s.name)}</span>${liveBadge(CUR)}</div>
+    <div class="sumrow">
+    <div class="scard"><div class="v">${s.n_events}</div><div class="m">événements</div></div>
+    <div class="scard"><div class="v">${s.n_values}</div><div class="m">value bets</div></div>
+    <div class="scard"><div class="v">${tks}</div><div class="m">tickets</div></div>
+    <div class="scard"><div class="v ${be>0?'pos':''}">${be>0?'+'+be+'%':'—'}</div><div class="m">meilleur edge</div></div></div>
+    <div class="warn">${isLive(CUR)?'Cotes réelles branchées (Pinnacle / The Odds API).':'Cotes de démonstration — le modèle tourne, mais brancher de vraies cotes activera les edges.'} Clique un match pour ses tickets liés. Paris virtuels, probabilités ≠ certitudes.</div>
+    <div class="sec">📊 Pronostics <span class="muted">(probabilités du modèle, blend marché)</span></div>
+    <div class="grid">${s.rows.map(r=>matchCard(CUR,r)).join('')}</div>
+    <div class="sec">🎫 Tickets <span class="muted">(mêmes profils que le foot, mise = % bankroll)</span></div>
+    ${tickets||'<div class="muted">Aucun ticket pour ce sport.</div>'}
+    ${propsSection(s)}`;
+}
+function propsSection(s){
+  const games=(s.props||[]).filter(g=>g.rows&&g.rows.length);
+  if(!games.length) return '';
+  let h=`<div class="sec">🎯 Props joueurs <span class="muted">(points — marché dé-vigué ; edge calculé seulement si projection PPG réelle dispo)</span></div>`;
+  h+=games.map(g=>`<div class="card"><div class="ckh">${esc(g.game)}</div>`+
+    g.rows.map(r=>`<div class="leg"><span>${esc(r.player)} <span class="muted">o/u ${r.line}</span></span>
+      <span>marché O ${r.mkt_over}% · ${r.side?`<b class="pos">${r.side} @${(+r.cote).toFixed(2)} +${r.edge}%</b>`:'<span class="muted">scanner</span>'}</span></div>`).join('')+
+    `</div>`).join('');
+  return h;
+}
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+[
+ {
+  "player": "Kane",
+  "team": "England",
+  "mid": 21,
+  "s": 0.38,
+  "mins": 0.95,
+  "cote": 2.3
+ },
+ {
+  "player": "Saka",
+  "team": "England",
+  "mid": 21,
+  "s": 0.15,
+  "mins": 0.85,
+  "cote": 3.1
+ },
+ {
+  "player": "Ronaldo",
+  "team": "Portugal",
+  "mid": 20,
+  "s": 0.38,
+  "mins": 0.9,
+  "cote": 1.8
+ },
+ {
+  "player": "Bruno Fernandes",
+  "team": "Portugal",
+  "mid": 20,
+  "s": 0.18,
+  "mins": 0.9,
+  "cote": 2.75
+ },
+ {
+  "player": "Luis Diaz",
+  "team": "Colombia",
+  "mid": 23,
+  "s": 0.3,
+  "mins": 0.95,
+  "cote": 2.2
+ },
+ {
+  "player": "Mbappe",
+  "team": "France",
+  "mid": 41,
+  "s": 0.35,
+  "mins": 0.95,
+  "cote": 1.57
+ }
+]

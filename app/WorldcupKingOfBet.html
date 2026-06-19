@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚽ Worldcup King of Bet</title>
+<style>
+:root{--bg:#0d1117;--bg2:#161b22;--bg3:#21262d;--border:#30363d;--txt:#e6edf3;--mut:#a9b4c0;
+--green:#3fb950;--red:#f85149;--gold:#d29922;--blue:#58a6ff;--purple:#bc8cff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
+header{background:linear-gradient(135deg,#1a2332,#0d1421);padding:18px 24px;border-bottom:2px solid var(--gold);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+header h1{font-size:1.4em;color:var(--gold)}
+header .sub{color:var(--mut);font-size:.85em}
+.bankroll{display:flex;align-items:center;gap:8px;background:var(--bg3);padding:8px 14px;border-radius:8px;border:1px solid var(--border)}
+.bankroll input{width:90px;background:var(--bg);color:var(--gold);border:1px solid var(--border);border-radius:6px;padding:5px 8px;font-size:1em;text-align:right}
+nav{display:flex;gap:4px;padding:10px 24px;background:var(--bg2);border-bottom:1px solid var(--border);flex-wrap:wrap}
+nav button{background:none;border:none;color:var(--mut);padding:9px 16px;cursor:pointer;font-size:.95em;border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+nav button.on{color:var(--gold);border-bottom-color:var(--gold);background:var(--bg3)}
+nav button:hover{color:var(--txt)}
+main{padding:20px 24px;max-width:1280px;margin:0 auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;margin-bottom:20px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px}
+.card h3{font-size:1em;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.card .big{font-size:1.5em;font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:.88em}
+th{text-align:left;color:var(--mut);font-weight:600;padding:8px 6px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2)}
+td{padding:7px 6px;border-bottom:1px solid #21262d}
+tr:hover td{background:#1c2129}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.8em;font-weight:600}
+.tg{background:#12381f;color:var(--green)}.tr{background:#3d1418;color:var(--red)}
+.ty{background:#3a2d12;color:var(--gold)}.tb{background:#122b45;color:var(--blue)}.tp{background:#2d1b45;color:var(--purple)}
+.bar{height:8px;border-radius:4px;background:var(--bg3);overflow:hidden;display:flex}
+.bar div{height:100%}
+.flt{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+select,input[type=text],input[type=number],input[type=date]{background:var(--bg3);color:var(--txt);border:1px solid var(--border);border-radius:8px;padding:8px 10px;font-size:.9em}
+.btn{background:var(--gold);color:#000;border:none;border-radius:8px;padding:9px 16px;font-weight:700;cursor:pointer;font-size:.9em}
+.btn:hover{opacity:.85}
+.btn2{background:var(--bg3);color:var(--txt);border:1px solid var(--border)}
+.ticket{border-left:4px solid var(--gold);margin-bottom:14px}
+.ticket.s{border-left-color:var(--green)}.ticket.e{border-left-color:var(--gold)}.ticket.f{border-left-color:var(--red)}.ticket.j{border-left-color:var(--purple)}
+.profhead{display:flex;align-items:center;gap:8px;margin:18px 0 6px;font-size:1.05em;font-weight:700}
+.chk{display:flex;flex-wrap:wrap;gap:6px}
+.chk label{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:.88em;display:flex;gap:6px;align-items:center}
+.chk input{accent-color:var(--gold)}
+.gengrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.leg{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed #2a3038;font-size:.92em}
+.leg:last-child{border-bottom:none}
+.muted{color:var(--mut);font-size:.85em}
+.stat{text-align:center;padding:6px}
+.stat .v{font-size:1.4em;font-weight:700}
+.statrow{display:flex;justify-content:space-around;flex-wrap:wrap}
+.warn{background:#2d1b08;border:1px solid #6b4a12;border-radius:10px;padding:12px 16px;margin-bottom:16px;font-size:.9em;color:#e0b35c}
+.del{color:var(--red);cursor:pointer;font-weight:700;padding:0 6px}
+.pos{color:var(--green)}.neg{color:var(--red)}
+@media(max-width:700px){main{padding:12px}th,td{padding:5px 4px;font-size:.95em}}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:700px){.tblwrap,.scroll-x{ -webkit-overflow-scrolling:touch } table{font-size:.9em}}
+.btn,.del,nav button{min-height:40px}.del{min-width:32px;display:inline-flex;align-items:center;justify-content:center}
+</style>
+</head>
+<body>
+<header>
+  <div><h1>⚽ WORLDCUP KING OF BET</h1><div class="sub">Moteur v3.0 multi-sports · données du <span id="gendate"></span> · Elo + Dixon-Coles + blend marché</div></div>
+  <div class="bankroll">💰 Bankroll <input type="number" id="bk" value="100" min="1" step="10"> €</div>
+</header>
+<nav>
+  <button class="on" data-t="dash">📊 Dashboard</button>
+  <button data-t="preds">📅 Pronostics</button>
+  <button data-t="qual">🏆 Qualifications</button>
+  <button data-t="val">💎 Values & Buteurs</button>
+  <button data-t="match">⚔️ Matchups</button>
+  <button data-t="opti">🎰 Générateur</button>
+  <button data-t="bets">🎫 Mes Paris</button>
+  <button data-t="promos">💸 Promos</button>
+</nav>
+<main>
+<div id="dash"></div>
+<div id="preds" style="display:none"></div>
+<div id="qual" style="display:none"></div>
+<div id="val" style="display:none"></div>
+<div id="match" style="display:none"></div>
+<div id="opti" style="display:none"></div>
+<div id="bets" style="display:none"></div>
+<div id="promos" style="display:none"></div>
+</main>
+<script src="app_data.js"></script>
+<script>
+const D = (typeof APP_DATA !== 'undefined' && APP_DATA) ? APP_DATA : null;
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+document.getElementById('gendate').textContent = D ? D.generated : '—';
+const FL = {Mexico:'🇲🇽','South Africa':'🇿🇦','South Korea':'🇰🇷',Czechia:'🇨🇿',Canada:'🇨🇦',Bosnia:'🇧🇦',Qatar:'🇶🇦',Switzerland:'🇨🇭',Brazil:'🇧🇷',Morocco:'🇲🇦',Haiti:'🇭🇹',Scotland:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',USA:'🇺🇸',Paraguay:'🇵🇾',Australia:'🇦🇺',Turkey:'🇹🇷',Germany:'🇩🇪',Curacao:'🇨🇼','Ivory Coast':'🇨🇮',Ecuador:'🇪🇨',Netherlands:'🇳🇱',Japan:'🇯🇵',Sweden:'🇸🇪',Tunisia:'🇹🇳',Belgium:'🇧🇪',Egypt:'🇪🇬',Iran:'🇮🇷','New Zealand':'🇳🇿',Spain:'🇪🇸','Cape Verde':'🇨🇻','Saudi Arabia':'🇸🇦',Uruguay:'🇺🇾',France:'🇫🇷',Senegal:'🇸🇳',Iraq:'🇮🇶',Norway:'🇳🇴',Argentina:'🇦🇷',Algeria:'🇩🇿',Austria:'🇦🇹',Jordan:'🇯🇴',Portugal:'🇵🇹','DR Congo':'🇨🇩',Uzbekistan:'🇺🇿',Colombia:'🇨🇴',England:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',Croatia:'🇭🇷',Ghana:'🇬🇭',Panama:'🇵🇦'};
+const fl = n => (FL[n]||'') + ' ' + n;
+const fmtM = p => fl(p.home) + ' – ' + fl(p.away);
+const eur = x => x.toFixed(2) + ' €';
+const bkEl = document.getElementById('bk');
+bkEl.value = localStorage.getItem('wkb_bk') || 100;
+bkEl.onchange = () => { localStorage.setItem('wkb_bk', bkEl.value); render(); };
+const BK = () => parseFloat(bkEl.value) || 100;
+
+// ============ NAVIGATION ============
+document.querySelectorAll('nav button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('nav button').forEach(x => x.classList.remove('on'));
+  b.classList.add('on');
+  ['dash','preds','qual','val','match','opti','bets','promos'].forEach(t => document.getElementById(t).style.display = t===b.dataset.t?'':'none');
+});
+
+// ============ DASHBOARD ============
+const PROF_CLS={banker:'s',value:'e',jackpot:'j',fun:'f'};
+const PROF_TAG={banker:'tg',value:'ty',jackpot:'tp',fun:'tr'};
+let LAST_TICKETS={};
+function ticketCard(t){
+  LAST_TICKETS[t.id]=t;
+  const cls=PROF_CLS[t.profile]||'e', tag=PROF_TAG[t.profile]||'ty';
+  const mise=BK()*t.stake_pct/100, gain=mise*t.cote, evcls=t.ev>=0?'pos':'neg';
+  return `<div class="card ticket ${cls}">
+    <h3>${t.title} <span class="tag ${tag}">cote ${(+t.cote).toFixed(2)}</span></h3>
+    ${t.legs.map(l=>`<div class="leg"><span>${l.label}${l.est?' <span class="tag ty" title="cote estimée">est.</span>':''}</span><span><b>${l.cote}</b> <span class="muted">${l.p}%${l.edge?(' · '+(l.edge>0?'+':'')+l.edge+'%'):''}</span></span></div>`).join('')}
+    <div class="statrow" style="margin-top:8px">
+      <div class="stat"><div class="v">${t.p}%</div><div class="muted">proba</div></div>
+      <div class="stat"><div class="v ${evcls}">${t.ev>=0?'+':''}${t.ev}%</div><div class="muted">EV modèle</div></div>
+      <div class="stat"><div class="v">${mise.toFixed(2)}€</div><div class="muted">mise</div></div>
+      <div class="stat"><div class="v pos">${gain.toFixed(2)}€</div><div class="muted">gain pot.</div></div>
+      <div class="stat"><div class="v">${t.risk}</div><div class="muted">risque</div></div>
+    </div>
+    <button class="btn" style="margin-top:8px;padding:5px 12px" onclick="addTicket('${t.id}')">➕ Ajouter à Mes Paris</button>
+  </div>`;
+}
+function addTicket(id){
+  const t=LAST_TICKETS[id]; if(!t) return;
+  const b=getBets(), mise=BK()*t.stake_pct/100;
+  b.push({d:new Date().toISOString().slice(0,10),s:'['+t.title+'] '+t.legs.map(l=>l.label).join(' + '),c:+(+t.cote).toFixed(2),m:+mise.toFixed(2),st:'pending'});
+  setBets(b); rBets(); alert('Ticket ajouté à Mes Paris ✔');
+}
+function rDash(){
+  const next = D.predictions.slice(0,8);
+  const v = D.values.length, B=D.ticket_batch||{}, bt=D.backtest;
+  const top=['banker','value','jackpot','fun'].map(k=>(B[k]&&B[k][0])).filter(Boolean);
+  document.getElementById('dash').innerHTML = `
+  <div class="warn">⚠️ Moteur v3.0 (blend 30% modèle / 70% marché, edges plafonnés 12%, mises quart-Kelly). ${v===0?'Aucune value 1N2 stricte aujourd’hui — marché efficient ; voici les meilleures opportunités relatives.':v+' value(s) 1N2 détectée(s).'} Probas = estimations : ne mise que ce que tu peux perdre.</div>
+  <div class="profhead">🎫 Sélection du jour — un ticket par profil <span class="muted" style="font-weight:400">(→ onglet Générateur pour en produire plusieurs)</span></div>
+  <div class="cards">${top.map(ticketCard).join('')||'<div class="muted">Aucun ticket disponible.</div>'}</div>
+  ${bt?`<div class="card"><h3>🎯 Calibration ${bt.source==='logged'?'<span class="tag tg">réel</span>':'<span class="tag ty">Elo-core</span>'} <span class="muted" style="font-weight:400">— pré-match, n=${bt.n}</span></h3>
+  <div class="statrow"><div class="stat"><div class="v">${bt.brier_model??'—'}</div><div class="muted">Brier modèle</div></div>
+  <div class="stat"><div class="v">${bt.brier_uniform??'—'}</div><div class="muted">Brier hasard</div></div>
+  <div class="stat"><div class="v ${bt.brier_model<bt.brier_uniform?'pos':'neg'}">${bt.hit_rate??'—'}%</div><div class="muted">pronos justes</div></div>
+  ${bt.clv&&bt.clv.n?`<div class="stat"><div class="v ${bt.clv.clv_avg>=0?'pos':'neg'}">${bt.clv.clv_avg>=0?'+':''}${bt.clv.clv_avg}%</div><div class="muted">CLV moyen (${bt.clv.n})</div></div>`:''}</div>
+  <div class="muted" style="margin-top:6px">${bt.note} Brier plus bas = mieux.${bt.source==='elo_core'?' Les probas pré-match sont désormais archivées à chaque run → le Brier réel s’affichera dès les prochains matchs joués.':''}</div></div>`:''}
+  ${(()=>{const S=D.signals||{};const ids=Object.keys(S);if(!ids.length)return '';
+    const tc={under:'tb',public:'ty',deadrubber:'tr'};
+    const rows=ids.map(id=>{const p=D.predictions.find(x=>String(x.id)===id);if(!p)return '';
+      return S[id].map(sg=>`<div class="leg"><span><span class="tag ${tc[sg.type]||'tb'}">${sg.type}</span> ${fmtM(p)} <span class="muted">${p.date.slice(5)}</span></span><span class="muted" style="max-width:54%;text-align:right">${sg.txt}</span></div>`).join('');}).join('');
+    return `<div class="card"><h3>🚩 Signaux WC contextuels</h3>${rows}<div class="muted" style="margin-top:6px">Edges hors 1N2 : dead rubber (équipe sans enjeu → rotation/nul, Under), match chaud de midi (Under 2.5), équipe publique (cote rognée). À confirmer avec le marché.</div></div>`;})()}
+  <div class="card"><h3>📅 Prochains matchs — vue rapide</h3><table><tr><th>Date</th><th>Match</th><th>1</th><th>N</th><th>2</th><th>Prono</th></tr>
+  ${next.map(p=>{const mx=Math.max(p.p1,p.pn,p.p2);const lab=mx===p.p1?fl(p.home):mx===p.p2?fl(p.away):'Nul';
+  return `<tr><td>${p.date.slice(5)}</td><td>${fmtM(p)}</td><td>${p.p1}%</td><td>${p.pn}%</td><td>${p.p2}%</td><td><span class="tag tb">${lab} ${mx}%</span></td></tr>`}).join('')}</table></div>`;
+}
+
+// ============ PRONOSTICS ============
+function rPreds(){
+  const dates=[...new Set(D.predictions.map(p=>p.date))];
+  const grps=[...new Set(D.predictions.map(p=>p.grp))].sort();
+  const fd=document.getElementById('fd')?.value||'all', fg=document.getElementById('fg')?.value||'all';
+  const rows=D.predictions.filter(p=>(fd==='all'||p.date===fd)&&(fg==='all'||p.grp===fg));
+  document.getElementById('preds').innerHTML=`
+  <div class="flt">
+    <select id="fd" onchange="rPreds()"><option value="all">Toutes dates</option>${dates.map(d=>`<option ${d===fd?'selected':''}>${d}</option>`).join('')}</select>
+    <select id="fg" onchange="rPreds()"><option value="all">Tous groupes</option>${grps.map(g=>`<option ${g===fg?'selected':''}>${g}</option>`).join('')}</select>
+    <span class="muted" style="align-self:center">${rows.length} matchs · cotes justes = 1/proba modèle</span>
+  </div>
+  <div class="card" style="overflow-x:auto"><table>
+  <tr><th>Date</th><th>G</th><th>Match</th><th>P1</th><th>PN</th><th>P2</th><th></th><th>xG</th><th>O2.5</th><th>BTTS</th><th>Scores probables</th><th>Cotes book</th></tr>
+  ${rows.map(p=>{
+    const bar=`<div class="bar" style="width:90px"><div style="width:${p.p1}%;background:var(--green)"></div><div style="width:${p.pn}%;background:var(--mut)"></div><div style="width:${p.p2}%;background:var(--red)"></div></div>`;
+    const mkt=p.mkt?`${p.mkt.h} / ${p.mkt.d} / ${p.mkt.a}${p.mkt.est?' <span class="ty tag">est</span>':''}`:'—';
+    const dk=p.desk?`<div class="muted" style="font-size:.82em;margin-top:3px">🧠 <b>${'★'.repeat(p.desk.confiance)+'☆'.repeat(Math.max(0,5-p.desk.confiance))}</b> ${p.desk.verdict}${p.desk.lean?` · lean: <b>${p.desk.lean}</b>`:''}</div>`:'';
+    const cc=p.disc?`<div class="muted" style="font-size:.8em;margin-top:2px">🟨 ${p.disc.cards_exp} <span style="opacity:.7">(O4.5 ${p.disc.p_over_cards45}%)</span>${p.disc.ref_conf==='CONMEBOL'?' <span class="tag tr">CONMEBOL</span>':''} · ⛳ ${p.disc.corners_exp} <span style="opacity:.7">(O9.5 ${p.disc.p_over_corners95}%)</span></div>`:'';
+    const koq=p.ko?`<div class="muted" style="font-size:.8em;margin-top:2px">🏆 se qualifie : ${p.home} <b>${p.pqh}%</b> / ${p.away} <b>${p.pqa}%</b></div>`:'';
+    return `<tr><td>${p.date.slice(5)}</td><td>${p.grp}</td><td>${fmtM(p)}${dk}${cc}${koq}</td>
+    <td><b>${p.p1}%</b><div class="muted">${p.f1}</div></td><td>${p.pn}%<div class="muted">${p.fn}</div></td><td><b>${p.p2}%</b><div class="muted">${p.f2}</div></td>
+    <td>${bar}</td><td class="muted">${p.xgh}-${p.xga}</td><td>${p.o25}%</td><td>${p.btts}%</td>
+    <td class="muted">${p.scores.map(s=>s[0]+'-'+s[1]+' ('+s[2]+'%)').join(' · ')}</td><td class="muted">${mkt}</td></tr>`}).join('')}
+  </table></div>`;
+}
+
+// ============ QUALIFICATIONS ============
+function rQual(){
+  if(!D.qualification||!D.qualification.length){
+    document.getElementById('qual').innerHTML='<div class="warn">🏆 Phase à élimination directe : le Monte-Carlo de qualification de poules ne s\'applique plus. Voir les probas « se qualifie » par match dans l\'onglet Pronostics.</div>';
+    return;
+  }
+  const grps=[...new Set(D.qualification.map(q=>q.grp))].sort();
+  document.getElementById('qual').innerHTML=`<div class="cards">
+  ${grps.map(g=>{const teams=D.qualification.filter(q=>q.grp===g);
+  return `<div class="card"><h3>Groupe ${g}</h3><table><tr><th>Équipe</th><th>1er</th><th>2e</th><th>3e rep.</th><th>Qualif</th></tr>
+  ${teams.map(q=>`<tr><td>${fl(q.team)}</td><td>${q.p1}%</td><td>${q.p2}%</td><td>${q.p3q}%</td>
+  <td><b class="${q.pq>=70?'pos':q.pq<35?'neg':''}">${q.pq}%</b><div class="bar"><div style="width:${q.pq}%;background:${q.pq>=70?'var(--green)':q.pq>=35?'var(--gold)':'var(--red)'}"></div></div></td></tr>`).join('')}
+  </table></div>`}).join('')}</div>
+  <div class="muted">20 000 simulations Monte-Carlo · top 2 + 8 meilleurs 3es qualifiés · tiebreakers FIFA (pts, diff, buts, head-to-head)</div>`;
+}
+
+// ============ VALUES & BUTEURS ============
+function rVal(){
+  const v=D.values, a=D.anomalies, s=D.scorers;
+  document.getElementById('val').innerHTML=`
+  ${v.length?`<div class="card"><h3>💎 Value bets 1N2 (edge 3-12%, validés)</h3><table><tr><th>Date</th><th>Match</th><th>Pari</th><th>Cote</th><th>P finale</th><th>Edge</th><th>Mise</th></tr>
+  ${v.map(x=>`<tr><td>${x.date.slice(5)}</td><td>${x.match}</td><td><span class="tag tg">${x.sel}</span></td><td><b>${x.cote}</b></td><td>${x.p_fin.toFixed(1)}%</td><td class="pos">+${x.edge.toFixed(1)}%</td><td>${(BK()*x.stake/100).toFixed(2)} €</td></tr>`).join('')}</table></div>`
+  :'<div class="warn">Aucune value 1N2 stricte aujourd’hui après garde-fous (edge 3-12%, cotes réelles uniquement). C’est normal sur un marché aussi liquide — la patience est une stratégie.</div>'}
+  <div class="card"><h3>⚽ Marché buteurs — P(marque) modèle vs cote</h3><table><tr><th>Joueur</th><th>Match</th><th>Date</th><th>Cote</th><th>P modèle</th><th>Edge</th></tr>
+  ${s.map(x=>`<tr><td><b>${x.player}</b> <span class="muted">${fl(x.team)}</span></td><td>${x.match}</td><td>${x.date.slice(5)}</td><td>${x.cote}</td><td>${x.p}%</td><td class="${x.edge>0?'pos':'neg'}">${x.edge>0?'+':''}${x.edge}%</td></tr>`).join('')}</table>
+  <div class="muted" style="margin-top:8px">P = 1−exp(−xG équipe × part des buts × minutes attendues). Edge >+5% = intéressant. Éviter les combinés victoire+buteur même équipe (taxe de corrélation des books) ; préférer les combinés buteurs inter-matchs.</div></div>
+  ${(()=>{const props=(D.ticket_pool||[]).filter(l=>['O/U','BTTS','Cartons','Corners'].includes(l.market)&&(l.edge||0)>0&&!l.est).sort((x,y)=>y.edge-x.edge);
+    if(!props.length) return `<div class="card"><h3>🟨 Value marchés alternatifs (cartons, corners, O/U, BTTS)</h3><div class="muted">Aucune value alt validée pour l'instant : les lignes cartons/corners sont encore estimées. Dès que l'agent cotes collecte de vraies lignes (est=false), les edges positifs s'afficheront ici et deviendront pariables dans le générateur.</div></div>`;
+    return `<div class="card"><h3>🟨 Value marchés alternatifs (validés)</h3><table><tr><th>Marché</th><th>Sélection</th><th>Date</th><th>Cote</th><th>P modèle</th><th>Edge</th></tr>
+    ${props.map(l=>`<tr><td><span class="tag tb">${l.market}</span></td><td>${l.label}</td><td>${(l.date||'').slice(5)}</td><td><b>${l.cote}</b></td><td>${(l.p*100).toFixed(0)}%</td><td class="pos">+${(l.edge*100).toFixed(1)}%</td></tr>`).join('')}</table>
+    <div class="muted" style="margin-top:6px">Cartons : modèle = base × arbitre (CONMEBOL ↑) × serrage du match. Corners : base × ouverture du jeu. Ajoutables au générateur via l'option « marchés alt ».</div></div>`;})()}
+  ${a.length?`<div class="card"><h3>🚨 Anomalies (edge >15% — vérifier la cote, ne pas parier aveuglément)</h3><table><tr><th>Date</th><th>Match</th><th>Pari</th><th>Cote</th><th>Edge brut</th></tr>
+  ${a.map(x=>`<tr><td>${x.date.slice(5)}</td><td>${x.match}</td><td>${x.sel}</td><td>${x.cote}</td><td class="neg">+${x.edge.toFixed(0)}%</td></tr>`).join('')}</table>
+  <div class="muted" style="margin-top:6px">Un edge aussi grand signale presque toujours une erreur de données ou de modèle, pas une opportunité.</div></div>`:''}`;
+}
+
+// ============ MATCHUPS (facteurs) ============
+function rMatch(){
+  const P=D.profils||{}, F=D.factors||{};
+  const dates=[...new Set(D.predictions.map(p=>p.date))];
+  const fmd=document.getElementById('fmd')?.value||dates[0];
+  const rows=D.predictions.filter(p=>p.date===fmd&&F[String(p.id)]);
+  const LN=[['gardien','Gardien'],['def_centrale','Charnière'],['lateraux','Latéraux'],['milieu','Milieu'],['ailes','Ailes'],['attaque','Attaque'],['mental','Mental'],['profondeur_banc','Banc'],['chaleur','Chaleur']];
+  const bar=(v,al)=>`<div style="display:inline-block;width:90px;text-align:${al}"><div style="display:inline-block;height:8px;border-radius:4px;width:${v*9}px;background:${v>=7?'var(--green)':v>=5?'var(--gold)':'var(--red)'}"></div> <b>${v}</b></div>`;
+  document.getElementById('match').innerHTML=`
+  <div class="flt"><select id="fmd" onchange="rMatch()">${dates.map(d=>`<option ${d===fmd?'selected':''}>${d}</option>`).join('')}</select>
+  <span class="muted" style="align-self:center">Comparaison poste par poste + avantages détectés. Impact borné à ±15 pts Elo dans le modèle.</span></div>
+  <div class="cards">
+  ${rows.map(p=>{const fh=P[p.home],fa=P[p.away],fx=F[String(p.id)];if(!fh||!fa)return '';
+  return `<div class="card" style="min-width:340px">
+  <h3>${fmtM(p)} ${fx.adj!==0?`<span class="tag ${fx.adj>0?'tg':'tr'}">${fx.adj>0?'+':''}${fx.adj} Elo ${fx.adj>0?p.home:p.away}</span>`:'<span class="tag tb">équilibré</span>'}</h3>
+  <div class="muted" style="margin-bottom:6px">${fh.style} ${fh.systeme} &nbsp;vs&nbsp; ${fa.style} ${fa.systeme}</div>
+  <table style="font-size:.85em">${LN.map(([k,lab])=>`<tr><td style="text-align:right">${bar(fh[k],'right')}</td><td style="text-align:center;color:var(--mut);padding:2px 8px">${lab}</td><td>${bar(fa[k],'left')}</td></tr>`).join('')}</table>
+  ${fx.adv.length?`<div style="margin-top:8px">${fx.adv.map(a=>`<div class="leg" style="border:none;padding:2px 0">⚡ ${a}</div>`).join('')}</div>`:''}
+  <div class="muted" style="margin-top:8px">💪 ${p.home} : ${fh.force}<br>⚠️ ${p.home} : ${fh.faiblesse}<br>💪 ${p.away} : ${fa.force}<br>⚠️ ${p.away} : ${fa.faiblesse}</div>
+  <div class="muted" style="margin-top:6px">⏱️ ${p.home} : ${fh.temps_forts} · ${p.away} : ${fa.temps_forts}<br>🎯 ${p.home} : ${fh.occasions} · ${p.away} : ${fa.occasions}</div>
+  </div>`}).join('')||'<div class="muted">Aucun match avec profil facteurs à cette date.</div>'}
+  </div>`;
+}
+
+// ============ GÉNÉRATEUR MULTI-TICKETS (batch, multi-profils) ============
+const PUBLICS=['France','Brazil','England','USA','Mexico','Argentina'];
+const PMETA={banker:{emoji:'🟢',name:'Banker',cap:0.05,kfrac:0.30},
+  value:{emoji:'🟡',name:'Value',cap:0.03,kfrac:0.25},
+  jackpot:{emoji:'🟣',name:'Jackpot',cap:0.01,kfrac:0.15},
+  fun:{emoji:'🔴',name:'Fun',cap:0.015,kfrac:0.10}};
+const cOdds=s=>s.reduce((x,c)=>x*c.cote,1);
+const cProb=s=>s.reduce((x,c)=>x*c.p,1);
+const kelly=(p,o)=>{const b=o-1;return b<=0?0:Math.max(0,(p*b-(1-p))/b);};
+const riskOf=p=>p>=.65?'Faible':p>=.40?'Modéré':p>=.20?'Élevé':'Très élevé';
+let TID=0,GEN_LAST={},GEN_SHOWN=[];
+
+function basePool(o){
+  let pool=(D.ticket_pool||[]).map(l=>Object.assign({},l));
+  if(o.alt){D.predictions.forEach(p=>{if(!p.mkt)return;
+    if(p.mkt.o25)pool.push({event_id:p.id,group_id:p.id,date:p.date,market:'O/U',
+      label:`+2.5 buts (${p.home}–${p.away})`,cote:p.mkt.o25,p:p.o25/100,edge:0,est:true,team:null});
+    if(p.mkt.btts)pool.push({event_id:p.id,group_id:p.id,date:p.date,market:'BTTS',
+      label:`Les 2 marquent (${p.home}–${p.away})`,cote:p.mkt.btts,p:p.btts/100,edge:0,est:true,team:null});});}
+  return pool;
+}
+function filterPool(pool,o,kind){
+  return pool.filter(l=>{
+    if(o.date!=='all'&&l.date!==o.date) return false;
+    if(l.cote<o.minOdds||l.cote>o.maxOdds) return false;
+    if(l.p<o.minProb) return false;
+    if(o.exclEst&&l.est) return false;
+    if(o.avoidPub&&l.team&&PUBLICS.includes(l.team)) return false;
+    if(l.market==='buteur'&&!o.buteurs) return false;
+    if((l.market==='O/U'||l.market==='BTTS'||l.market==='Cartons'||l.market==='Corners')&&!o.alt) return false;
+    if(l.market==='1N2'){const isNul=l.label.indexOf('Nul')===0;
+      if(isNul&&!o.nuls) return false; if(!isNul&&!o.un2) return false;}
+    const isProp=l.market!=='1N2';
+    if(kind==='props'&&!isProp) return false;
+    if(kind==='noprops'&&isProp) return false;
+    if(kind==='value'&&(l.edge||0)<=0) return false;
+    if(o.mu){
+      if(l.market!=='1N2') return false;
+      const f=(D.factors||{})[l.event_id]; if(!f) return false;
+      const pred=D.predictions.find(x=>x.id===l.event_id); if(!pred) return false;
+      const isNul=l.label.indexOf('Nul')===0;
+      const ok=isNul?Math.abs(f.adj)<3:(l.team===pred.home?f.adj>=6:l.team===pred.away?f.adj<=-6:false);
+      if(!ok) return false;
+    }
+    return true;
+  });
+}
+function searchCombo(pool,maxLegs,obj,target,mustG){
+  pool=pool.slice().sort((a,b)=>obj([b])-obj([a])).slice(0,26);
+  let best=null,bestObj=-1e18,bestAny=null,bestAnyOdds=-1;
+  const consider=s=>{if(!s.length)return;const oc=cOdds(s);
+    if(oc>bestAnyOdds){bestAnyOdds=oc;bestAny=s.slice();}
+    const ok=target==null||oc>=target;const ob=obj(s);
+    if(ok&&ob>bestObj){bestObj=ob;best=s.slice();}};
+  const rec=(start,s,used)=>{if(s.length)consider(s);if(s.length>=maxLegs)return;
+    for(let i=start;i<pool.length;i++){const c=pool[i];if(used.has(c.group_id))continue;
+      used.add(c.group_id);s.push(c);rec(i+1,s,used);s.pop();used.delete(c.group_id);}};
+  if(mustG!=null){
+    const forced=pool.filter(c=>c.group_id===mustG).sort((a,b)=>obj([b])-obj([a]));
+    if(forced.length){const seed=forced[0],rest=pool.filter(c=>c.group_id!==mustG);
+      const rec2=(start,s,used)=>{consider(s);if(s.length>=maxLegs)return;
+        for(let i=start;i<rest.length;i++){const c=rest[i];if(used.has(c.group_id))continue;
+          used.add(c.group_id);s.push(c);rec2(i+1,s,used);s.pop();used.delete(c.group_id);}};
+      rec2(0,[seed],new Set([seed.group_id]));return best||bestAny;}}
+  rec(0,[],new Set());return best||bestAny;
+}
+function mkTicket(profile,title,legs,o){
+  if(!legs||!legs.length)return null;
+  const cote=+cOdds(legs).toFixed(2),p=cProb(legs),ev=p*cote-1,M=PMETA[profile];
+  let pct=Math.max(0.005,Math.min(M.cap,M.kfrac*kelly(p,cote)));
+  return {id:'g'+(TID++),profile,title,cote,p:+(p*100).toFixed(1),ev:+(ev*100).toFixed(1),
+    stake_pct:+(pct*100).toFixed(2),risk:riskOf(p),n_legs:legs.length,
+    legs:legs.map(l=>({label:l.label,event_id:l.event_id,cote:l.cote,p:+(l.p*100).toFixed(1),
+      edge:+((l.edge||0)*100).toFixed(1),market:l.market,date:l.date,est:!!l.est}))};
+}
+const NAMES={1:'Single',2:'Duo',3:'Trio',4:'Quattro'};
+function tkey(t){return t.legs.map(l=>l.label).sort().join('|');}
+function buildBatch(o){
+  const pool=basePool(o),res={};
+  o.profiles.forEach(prof=>{
+    let raw=[];
+    if(prof==='banker'){
+      const pl=filterPool(pool,o,'noprops').filter(l=>l.p>=0.60);
+      [1,2,3].forEach(n=>{if(n>o.maxLegs)return;
+        const best=searchCombo(pl,n,s=>s.length===n?cProb(s):-1,null,o.mustG);
+        const t=mkTicket('banker','🟢 Banker — '+NAMES[n],best,o);if(t)raw.push(t);});
+    } else if(prof==='value'){
+      let pl=filterPool(pool,o,'value');if(!pl.length)pl=filterPool(pool,o,'noprops');
+      [1,2,3].forEach(n=>{if(n>o.maxLegs)return;
+        const best=searchCombo(pl,n,s=>s.length===n?cProb(s)*cOdds(s):-1,null,o.mustG);
+        const t=mkTicket('value','🟡 Value — '+NAMES[n],best,o);if(t)raw.push(t);});
+    } else if(prof==='jackpot'){
+      const pl=filterPool(pool,o,'all');
+      o.bands.forEach(band=>{const best=searchCombo(pl,o.maxLegs,s=>cProb(s),band,o.mustG);
+        if(best&&cOdds(best)>=band*0.85){const t=mkTicket('jackpot','🟣 Jackpot — cible x'+band,best,o);if(t)raw.push(t);}});
+    } else if(prof==='fun'){
+      const pl=filterPool(pool,o,'props');
+      if(pl.length){
+        const b1=searchCombo(pl,1,s=>s.reduce((x,l)=>x+(l.edge||0),0),null,o.mustG);
+        let t=mkTicket('fun','🔴 Fun — Prop solo',b1,o);if(t)raw.push(t);
+        [2,3].forEach(n=>{if(n>o.maxLegs)return;
+          const best=searchCombo(pl,n,s=>s.length===n?cProb(s)*cOdds(s):-1,null,o.mustG);
+          t=mkTicket('fun','🔴 Fun — Combo x'+n,best,o);if(t)raw.push(t);});}}
+    const seen=new Set(),uniq=[];
+    raw.forEach(t=>{const k=tkey(t);if(seen.has(k))return;seen.add(k);uniq.push(t);});
+    res[prof]=uniq.slice(0,o.nVar);
+  });
+  return res;
+}
+let GEN_SYS=null;
+function nCk(arr,k){const res=[];(function rec(start,combo){if(combo.length===k){res.push(combo.slice());return;}for(let i=start;i<arr.length;i++){combo.push(arr[i]);rec(i+1,combo);combo.pop();}})(0,[]);return res;}
+function buildSystem(o,sysType){
+  const parts=sysType.split('/').map(Number),k=parts[0],N=parts[1];
+  let pool=filterPool(basePool(o),o,'noprops').sort((a,b)=>b.p-a.p);
+  const seen=new Set(),base=[];
+  for(const l of pool){if(seen.has(l.group_id))continue;seen.add(l.group_id);base.push(l);if(base.length>=N)break;}
+  if(base.length<N) return null;
+  const combos=nCk(base,k).map(c=>({legs:c,cote:+cOdds(c).toFixed(2),p:cProb(c)}));
+  const unit=Math.max(0.5,BK()*0.005);
+  const avgOdds=combos.reduce((x,c)=>x+c.cote,0)/combos.length;
+  const fact=z=>{let r=1;for(let i=2;i<=z;i++)r*=i;return r;};
+  const C=(z,r)=>(r<0||r>z)?0:fact(z)/(fact(r)*fact(z-r));
+  const scen=[];for(let m=k;m<=N;m++)scen.push({m,won:C(m,k),ret:+(C(m,k)*unit*avgOdds).toFixed(2)});
+  return {k,N,base,combos,unit:+unit.toFixed(2),totalStake:+(unit*combos.length).toFixed(2),avgOdds:+avgOdds.toFixed(2),scen};
+}
+function SYS_CARD(sy){
+  return `<div class="profhead">🧩 Système ${sy.k}/${sy.N} <span class="muted" style="font-weight:400">— ${sy.combos.length} combinés de ${sy.k}, mise totale ${sy.totalStake.toFixed(2)}€</span></div>
+  <div class="card ticket j">
+  <div class="muted" style="margin-bottom:6px">${sy.N} sélections (1/match), tous les combinés de ${sy.k}. Tu encaisses chaque combiné dont les ${sy.k} sélections passent : une sélection ratée ne ruine pas le ticket.</div>
+  ${sy.base.map(l=>`<div class="leg"><span>${l.label}</span><span><b>${l.cote}</b> <span class="muted">${(l.p*100).toFixed(0)}%</span></span></div>`).join('')}
+  <div class="statrow" style="margin-top:8px">
+    <div class="stat"><div class="v">${sy.combos.length}</div><div class="muted">combinés</div></div>
+    <div class="stat"><div class="v">${sy.unit.toFixed(2)}€</div><div class="muted">mise/combiné</div></div>
+    <div class="stat"><div class="v">${sy.totalStake.toFixed(2)}€</div><div class="muted">mise totale</div></div>
+    <div class="stat"><div class="v">${sy.avgOdds.toFixed(2)}</div><div class="muted">cote moy.</div></div>
+  </div>
+  <table style="margin-top:8px"><tr><th>Sélections gagnantes</th><th>Combinés gagnants</th><th>Retour approx.</th></tr>
+  ${sy.scen.map(x=>`<tr><td>${x.m}/${sy.N}</td><td>${x.won}</td><td class="${x.ret>=sy.totalStake?'pos':'neg'}">${x.ret.toFixed(2)}€</td></tr>`).join('')}</table>
+  <div class="muted" style="margin-top:6px">Retour approximatif (cote moyenne des combinés). Couvre une sélection ratée, mais coûte mise × nombre de combinés.</div>
+  <button class="btn" style="margin-top:8px" onclick="addSystem()">➕ Ajouter le système à Mes Paris</button></div>`;
+}
+function addSystem(){if(!GEN_SYS)return;const b=getBets();GEN_SYS.combos.forEach((c,i)=>b.push({d:new Date().toISOString().slice(0,10),s:'SYSTÈME '+GEN_SYS.k+'/'+GEN_SYS.N+' #'+(i+1)+' : '+c.legs.map(l=>l.label).join(' + '),c:+c.cote.toFixed(2),m:+GEN_SYS.unit.toFixed(2),st:'pending'}));setBets(b);rBets();alert(GEN_SYS.combos.length+' combinés système ajoutés ✔');}
+function genBatch(){
+  const g=id=>document.getElementById(id);
+  const profiles=['banker','value','jackpot','fun'].filter(p=>g('p_'+p).checked);
+  if(!profiles.length){g('o_res').innerHTML='<div class="warn">Coche au moins un profil.</div>';return;}
+  const bands={mod:[3,5,10],gros:[10,25,50],enorme:[25,50,100]}[g('g_amb').value];
+  const o={profiles,nVar:+g('g_var').value,maxLegs:+g('g_legs').value,date:g('g_date').value,
+    minOdds:+g('g_min').value||1.12,maxOdds:+g('g_max').value||12,minProb:0.12,bands,
+    un2:g('m_1n2').checked,nuls:g('m_nuls').checked,buteurs:g('m_but').checked,alt:g('m_alt').checked,
+    avoidPub:g('g_pub').checked,exclEst:g('g_est').checked,mu:g('m_mu').checked};
+  const team=g('g_team').value.trim();o.mustG=null;
+  if(team){const t=team.toLowerCase(),f=basePool(o).find(l=>(l.team||'').toLowerCase().includes(t)||l.label.toLowerCase().includes(t));
+    if(!f){g('o_res').innerHTML='<div class="warn">Aucune sélection ne contient « '+team+' ». Vérifie l’orthographe (ex: Switzerland, Mbappe).</div>';return;}
+    o.mustG=f.group_id;}
+  TID=0;LAST_TICKETS={};GEN_SHOWN=[];
+  const batch=buildBatch(o);GEN_LAST=batch;
+  let html='',total=0;
+  profiles.forEach(prof=>{const arr=batch[prof]||[];if(!arr.length)return;total+=arr.length;
+    html+=`<div class="profhead">${PMETA[prof].emoji} ${PMETA[prof].name} <span class="muted" style="font-weight:400">— ${arr.length} ticket(s)</span> <button class="btn btn2" style="padding:3px 10px;font-size:.8em" onclick="addProf('${prof}')">+ tout ajouter</button></div>`;
+    html+=`<div class="gengrid">${arr.map(t=>{GEN_SHOWN.push(t.id);return ticketCard(t);}).join('')}</div>`;});
+  let sysHtml='';GEN_SYS=null;
+  const sysType=g('g_sys')?g('g_sys').value:'none';
+  if(sysType&&sysType!=='none'){
+    const sy=buildSystem(o,sysType);
+    if(!sy){sysHtml=`<div class="warn">Système ${sysType} : pas assez de sélections (il en faut ${sysType.split('/')[1]}). Élargis les filtres.</div>`;}
+    else{GEN_SYS=sy;sysHtml=SYS_CARD(sy);}
+  }
+  if(!total&&!sysHtml){g('o_res').innerHTML='<div class="warn">Aucun ticket constructible — élargis les cotes, ajoute des marchés (buteurs/alt) ou réduis l’ambition jackpot.</div>';return;}
+  const headT=total?`<div style="margin:14px 0 4px"><button class="btn" onclick="addAllTickets()">➕ Ajouter les ${total} tickets à Mes Paris</button> <span class="muted">${total} tickets sur ${profiles.length} profil(s)</span></div>`+html:'';
+  g('o_res').innerHTML=headT+sysHtml;
+}
+function addTicketSilent(t){const b=getBets(),mise=BK()*t.stake_pct/100;
+  b.push({d:new Date().toISOString().slice(0,10),s:'['+t.title+'] '+t.legs.map(l=>l.label).join(' + '),c:+(+t.cote).toFixed(2),m:+mise.toFixed(2),st:'pending'});setBets(b);}
+function addProf(prof){(GEN_LAST[prof]||[]).forEach(addTicketSilent);rBets();alert('Profil '+PMETA[prof].name+' ajouté ✔');}
+function addAllTickets(){let n=0;GEN_SHOWN.forEach(id=>{const t=LAST_TICKETS[id];if(t){addTicketSilent(t);n++;}});rBets();alert(n+' tickets ajoutés ✔');}
+function rGen(){
+  const dates=[...new Set(D.predictions.map(p=>p.date))];
+  document.getElementById('opti').innerHTML=`
+  <div class="card"><h3>🎰 Générateur multi-tickets <span class="muted" style="font-weight:400;font-size:.78em">— plusieurs tickets par profil, en un clic</span></h3>
+  <div style="margin-top:10px"><div class="muted" style="margin-bottom:4px">Profils à générer</div>
+  <div class="chk">
+    <label><input type="checkbox" id="p_banker" checked> 🟢 Banker (sûr)</label>
+    <label><input type="checkbox" id="p_value" checked> 🟡 Value (EV+)</label>
+    <label><input type="checkbox" id="p_jackpot" checked> 🟣 Jackpot (gros gain)</label>
+    <label><input type="checkbox" id="p_fun" checked> 🔴 Fun (buteurs/alt)</label>
+  </div></div>
+  <div class="flt" style="margin-top:12px">
+    <label class="muted">Variantes / profil <select id="g_var">${[1,2,3,4,5].map(n=>`<option ${n===3?'selected':''}>${n}</option>`).join('')}</select></label>
+    <label class="muted">Sélections max <select id="g_legs">${[2,3,4,5,6].map(n=>`<option ${n===4?'selected':''}>${n}</option>`).join('')}</select></label>
+    <label class="muted">Ambition jackpot <select id="g_amb"><option value="mod">Modérée (x3–10)</option><option value="gros" selected>Grosse (x10–50)</option><option value="enorme">Énorme (x25–100)</option></select></label>
+    <label class="muted">Date <select id="g_date"><option value="all">Toutes</option>${dates.map(d=>`<option>${d}</option>`).join('')}</select></label>
+  </div>
+  <div class="flt">
+    <label class="muted">Cote min/leg <input type="number" id="g_min" value="1.12" step="0.01" style="width:78px"></label>
+    <label class="muted">Cote max/leg <input type="number" id="g_max" value="12" step="0.5" style="width:78px"></label>
+    <label class="muted">Système <select id="g_sys"><option value="none">Aucun</option><option>2/3</option><option>2/4</option><option>3/4</option><option>3/5</option></select></label>
+    <input type="text" id="g_team" placeholder="Imposer une équipe/joueur (ex: Switzerland, Mbappe)" style="min-width:260px">
+  </div>
+  <div style="margin-top:6px"><div class="muted" style="margin-bottom:4px">Marchés & options</div>
+  <div class="chk">
+    <label><input type="checkbox" id="m_1n2" checked> 1N2 (victoires)</label>
+    <label><input type="checkbox" id="m_nuls" checked> Nuls</label>
+    <label><input type="checkbox" id="m_but" checked> Buteurs</label>
+    <label><input type="checkbox" id="m_alt"> Marchés alt. (O/U, BTTS — cotes est.)</label>
+    <label><input type="checkbox" id="g_pub"> Éviter équipes publiques</label>
+    <label><input type="checkbox" id="g_est"> Exclure cotes estimées</label>
+    <label><input type="checkbox" id="m_mu"> Matchup confirme (factors)</label>
+  </div></div>
+  <button class="btn" style="margin-top:12px" onclick="genBatch()">⚡ Générer les tickets</button>
+  <div class="muted" style="margin-top:8px">Chaque profil sort plusieurs combinés optimisés (1 sélection max par match, anti-corrélation). Banker = proba max · Value = meilleure EV · Jackpot = cote cible élevée · Fun = buteurs & marchés alternatifs. Mises en quart-Kelly plafonné par profil.</div>
+  </div>
+  <div id="o_res"></div>`;
+}
+
+// ============ MES PARIS ============
+const getBets=()=>JSON.parse(localStorage.getItem('wkb_bets')||'[]');
+const setBets=b=>localStorage.setItem('wkb_bets',JSON.stringify(b));
+function addBet(){
+  const f=id=>document.getElementById(id).value;
+  if(!f('b_sel')||!f('b_cote')||!f('b_mise')) return alert('Remplis sélection, cote et mise');
+  const b=getBets();
+  b.push({d:f('b_date')||new Date().toISOString().slice(0,10),s:f('b_sel'),c:parseFloat(f('b_cote')),m:parseFloat(f('b_mise')),st:'pending'});
+  setBets(b); rBets();
+}
+function setSt(i,st){const b=getBets();b[i].st=st;setBets(b);rBets();}
+function delBet(i){const b=getBets();b.splice(i,1);setBets(b);rBets();}
+function expBets(){
+  const blob=new Blob([JSON.stringify(getBets(),null,1)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='mes_paris.json';a.click();
+}
+function rBets(){
+  const b=getBets();
+  let staked=0,pl=0,won=0,lost=0,pend=0;
+  b.forEach(x=>{staked+=x.m;
+    if(x.st==='won'){pl+=x.m*(x.c-1);won++}
+    else if(x.st==='lost'){pl-=x.m;lost++}
+    else pend++;});
+  const roi=staked?(pl/staked*100):0;
+  let cum=0; const ptsArr=b.filter(x=>x.st!=='pending').map(x=>{cum+=x.st==='won'?x.m*(x.c-1):-x.m;return cum;});
+  let svg='';
+  if(ptsArr.length>1){
+    const W=600,H=120,mn=Math.min(0,...ptsArr),mx=Math.max(0,...ptsArr),rg=(mx-mn)||1;
+    const pts=ptsArr.map((v,i)=>`${(i/(ptsArr.length-1)*W).toFixed(1)},${(H-((v-mn)/rg*H)).toFixed(1)}`).join(' ');
+    const zero=H-((0-mn)/rg*H);
+    svg=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:120px;margin-top:10px"><line x1="0" y1="${zero}" x2="${W}" y2="${zero}" stroke="#30363d" stroke-dasharray="4"/><polyline points="${pts}" fill="none" stroke="${cum>=0?'#3fb950':'#f85149'}" stroke-width="2.5"/></svg>`;
+  }
+  document.getElementById('bets').innerHTML=`
+  <div class="card"><div class="statrow">
+    <div class="stat"><div class="v">${b.length}</div><div class="muted">paris</div></div>
+    <div class="stat"><div class="v">${eur(staked)}</div><div class="muted">total misé</div></div>
+    <div class="stat"><div class="v ${pl>=0?'pos':'neg'}">${pl>=0?'+':''}${eur(pl)}</div><div class="muted">profit/perte</div></div>
+    <div class="stat"><div class="v ${roi>=0?'pos':'neg'}">${roi.toFixed(1)}%</div><div class="muted">ROI</div></div>
+    <div class="stat"><div class="v">${won}W / ${lost}L / ${pend}⏳</div><div class="muted">bilan</div></div>
+  </div>${svg}</div>
+  ${D.paper?(()=>{const P=D.paper;const pend=P.bets.filter(x=>x.status==='pending');const done=P.bets.filter(x=>x.status!=='pending');
+  const apl=P.bankroll-P.bankroll_start;
+  return `<div class="card" style="border-left:4px solid var(--purple)"><h3>🤖 Agent parieur automatique <span class="tag tp">stratégie prudente</span></h3>
+  <div class="statrow">
+    <div class="stat"><div class="v">${P.bankroll.toFixed(2)} €</div><div class="muted">bankroll agent</div></div>
+    <div class="stat"><div class="v ${apl>=0?'pos':'neg'}">${apl>=0?'+':''}${apl.toFixed(2)} €</div><div class="muted">P/L total</div></div>
+    <div class="stat"><div class="v">${pend.length}</div><div class="muted">paris ouverts</div></div>
+    <div class="stat"><div class="v">${done.filter(x=>x.status==='won').length}W / ${done.filter(x=>x.status==='lost').length}L</div><div class="muted">réglés</div></div>
+  </div>
+  ${(()=>{const bym={};done.forEach(b=>{const m=(b.placed||'').slice(0,7);(bym[m]=bym[m]||{n:0,st:0,pl:0,clv:[]});bym[m].n++;bym[m].st+=b.stake;bym[m].pl+=b.pl;if(typeof b.clv==='number')bym[m].clv.push(b.clv);});const rows=Object.keys(bym).sort().map(m=>{const x=bym[m],roi=x.st?x.pl/x.st*100:0,clv=x.clv.length?x.clv.reduce((a,c)=>a+c,0)/x.clv.length*100:null;return `<tr><td>${m}</td><td>${x.n}</td><td>${x.st.toFixed(2)}€</td><td class="${x.pl>=0?'pos':'neg'}">${x.pl>=0?'+':''}${x.pl.toFixed(2)}€</td><td class="${roi>=0?'pos':'neg'}">${roi.toFixed(1)}%</td><td>${clv===null?'n/d':(clv>=0?'+':'')+clv.toFixed(1)+'%'}</td></tr>`;}).join('');return `<div class="muted" style="margin:10px 0 4px">📈 ROI mensuel (paris réglés de l'agent)</div><table><tr><th>Mois</th><th>Paris</th><th>Misé</th><th>P/L</th><th>ROI</th><th>CLV moy.</th></tr>${rows||'<tr><td colspan="6" class="muted">Aucun pari réglé pour le moment.</td></tr>'}</table>`;})()}
+  <table><tr><th>Placé</th><th>Match</th><th>Marché</th><th>Sélection</th><th>Cote</th><th>Mise</th><th>Edge</th><th>Statut</th></tr>
+  ${P.bets.slice().reverse().map(b=>`<tr><td>${b.placed.slice(5)}</td><td>${b.match}</td><td>${b.market}</td><td><b>${b.sel}</b></td><td>${b.cote}</td><td>${b.stake.toFixed(2)} €</td><td>+${b.edge}%</td>
+  <td>${b.status==='pending'?'<span class="tag tb">EN COURS</span>':b.status==='won'?`<span class="tag tg">GAGNÉ +${b.pl.toFixed(2)}€</span>`:`<span class="tag tr">PERDU ${b.pl.toFixed(2)}€</span>`}</td></tr>`).join('')||'<tr><td colspan="8" class="muted">Aucun pari placé par l’agent pour le moment.</td></tr>'}
+  </table>
+  <div class="muted" style="margin-top:8px">Paris virtuels (paper trading) placés et réglés automatiquement à chaque mise à jour quotidienne. Réplique-les chez ton bookmaker si tu le souhaites — l’agent ne mise jamais d’argent réel.</div></div>`})():''}
+  <div class="card"><h3>➕ Ajouter un pari</h3>
+  <div class="flt">
+    <input type="date" id="b_date" value="${new Date().toISOString().slice(0,10)}">
+    <input type="text" id="b_sel" placeholder="Sélection (ex: Suisse bat Qatar)" style="flex:1;min-width:200px">
+    <input type="number" id="b_cote" placeholder="Cote" step="0.01" style="width:90px">
+    <input type="number" id="b_mise" placeholder="Mise €" step="0.5" style="width:90px">
+    <button class="btn" onclick="addBet()">Ajouter</button>
+    <button class="btn btn2" onclick="expBets()">⬇ Export</button>
+  </div></div>
+  <div class="card"><table><tr><th>Date</th><th>Sélection</th><th>Cote</th><th>Mise</th><th>Gain pot.</th><th>Statut</th><th></th></tr>
+  ${b.map((x,i)=>`<tr><td>${esc(x.d)}</td><td>${esc(x.s)}</td><td>${esc(x.c)}</td><td>${eur(x.m)}</td><td>${eur(x.m*x.c)}</td>
+  <td>${x.st==='pending'?`<button class="btn" style="padding:3px 10px;background:var(--green)" onclick="setSt(${i},'won')">✓</button> <button class="btn" style="padding:3px 10px;background:var(--red);color:#fff" onclick="setSt(${i},'lost')">✗</button>`
+  :x.st==='won'?`<span class="tag tg">GAGNÉ</span> <a class="muted" style="cursor:pointer" onclick="setSt(${i},&#39;pending&#39;)">↩</a>`:`<span class="tag tr">PERDU</span> <a class="muted" style="cursor:pointer" onclick="setSt(${i},&#39;pending&#39;)">↩</a>`}</td>
+  <td><span class="del" onclick="delBet(${i})">×</span></td></tr>`).join('')||'<tr><td colspan="7" class="muted">Aucun pari enregistré. Ajoute ton premier pari ci-dessus — tout est sauvegardé localement dans ton navigateur.</td></tr>'}
+  </table></div>`;
+}
+// ============ PROMOS (cotes boostées + freebets) ============
+const getPromos=()=>JSON.parse(localStorage.getItem('wkb_promos')||'[]');
+const setPromos=a=>localStorage.setItem('wkb_promos',JSON.stringify(a));
+function promoVal(p){
+  if(p.type==='boost'){const up=p.cn>0?(p.cb/p.cn-1):0;return {uplift:up*100,ev:p.mise*up,ok:up>=0.05};}
+  const o=p.cf||0;const val=o>1?p.mise*(o-1)/o:0;return {uplift:null,ev:val,ok:o>=2.5};
+}
+function addPromo(){
+  const g=id=>document.getElementById(id);
+  const type=g('pr_type').value, lib=g('pr_lib').value.trim();
+  if(!lib) return alert("Indique l'événement / la sélection");
+  const mise=parseFloat(g('pr_mise').value)||0;
+  const p={d:new Date().toISOString().slice(0,10),type,lib,mise,st:'todo'};
+  if(type==='boost'){p.cn=parseFloat(g('pr_cn').value)||0;p.cb=parseFloat(g('pr_cb').value)||0;}
+  else{p.cf=parseFloat(g('pr_cb').value)||0;}
+  const a=getPromos();a.push(p);setPromos(a);rPromos();
+}
+function delPromo(i){const a=getPromos();a.splice(i,1);setPromos(a);rPromos();}
+function setPromoSt(i,st){const a=getPromos();a[i].st=st;setPromos(a);rPromos();}
+function rPromos(){
+  const a=getPromos();let totEV=0;a.forEach(p=>{totEV+=promoVal(p).ev;});
+  document.getElementById('promos').innerHTML=`
+  <div class="warn">💸 Les cotes boostées et freebets des books FR sont la <b>seule EV+ structurelle</b> pour une petite bankroll (TRJ ~85%, marges 8-12%). Un boost qui bat la meilleure cote normale de ≥5-7% se joue au plafond ; un freebet vaut ~70-80% de sa valeur faciale via couverture (lay sur cote 3.5-5).</div>
+  <div class="card"><div class="statrow">
+    <div class="stat"><div class="v">${a.length}</div><div class="muted">promos</div></div>
+    <div class="stat"><div class="v pos">+${totEV.toFixed(2)} €</div><div class="muted">EV/valeur captée (est.)</div></div>
+    <div class="stat"><div class="v">${a.filter(x=>x.st==='todo').length}</div><div class="muted">à faire</div></div>
+  </div></div>
+  <div class="card"><h3>➕ Ajouter une promo</h3>
+  <div class="flt">
+    <select id="pr_type"><option value="boost">Cote boostée</option><option value="freebet">Freebet</option></select>
+    <input type="text" id="pr_lib" placeholder="Événement / sélection (ex: France gagne)" style="flex:1;min-width:200px">
+    <input type="number" id="pr_cn" placeholder="Cote normale" step="0.01" style="width:110px">
+    <input type="number" id="pr_cb" placeholder="Cote boostée / freebet" step="0.01" style="width:160px">
+    <input type="number" id="pr_mise" placeholder="Mise / montant €" step="0.5" style="width:140px">
+    <button class="btn" onclick="addPromo()">Ajouter</button>
+  </div>
+  <div class="muted">Boost : cote normale + cote boostée. Freebet : montant (Mise) + cote visée (champ « boostée »). La valeur est estimée automatiquement.</div></div>
+  <div class="card"><table><tr><th>Date</th><th>Type</th><th>Sélection</th><th>Détail</th><th>Uplift</th><th>EV/valeur</th><th>Statut</th><th></th></tr>
+  ${a.map((p,i)=>{const v=promoVal(p);return `<tr><td>${esc(p.d).slice(5)}</td><td><span class="tag ${p.type==='boost'?'tg':'tp'}">${esc(p.type)}</span></td><td>${esc(p.lib)}</td>
+  <td class="muted">${p.type==='boost'?`${p.cn} → <b>${p.cb}</b> · mise ${p.mise}€`:`${p.mise}€ @ ${p.cf}`}</td>
+  <td>${v.uplift!==null?`<b class="${v.ok?'pos':''}">${v.uplift>=0?'+':''}${v.uplift.toFixed(1)}%</b>`:'—'}</td>
+  <td class="${v.ev>=0?'pos':'neg'}">+${v.ev.toFixed(2)}€</td>
+  <td>${p.st==='todo'?`<button class="btn" style="padding:3px 10px" onclick="setPromoSt(${i},'done')">✓ fait</button>`:`<span class="tag tg">FAIT</span>`}</td>
+  <td><span class="del" onclick="delPromo(${i})">×</span></td></tr>`;}).join('')||`<tr><td colspan="8" class="muted">Aucune promo. Ajoute les cotes boostées WC repérées (l'agent de 8h en suggère dans son rapport).</td></tr>`}
+  </table></div>`;
+}
+function render(){rDash();rPreds();rQual();rVal();rMatch();rGen();rBets();rPromos();}
+if(D){ try{ render(); }catch(e){ document.getElementById('main').innerHTML='<div class="warn">⚠️ Erreur d\'affichage : '+esc(e.message)+'</div>'; } }
+else{ document.getElementById('main').innerHTML='<div class="warn">⚠️ Données indisponibles (app_data.js non chargé). Relance la génération puis recharge la page.</div>'; }
+</script>
+</body>
+</html>

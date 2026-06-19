@@ -1,0 +1,9 @@
+{
+ "played": [],
+ "remaining": [
+  {"id": 1, "group": "UCL", "home": "Man City",   "away": "Inter",     "date": "2026-06-20"},
+  {"id": 2, "group": "UCL", "home": "Real Madrid","away": "Liverpool", "date": "2026-06-20"},
+  {"id": 3, "group": "UCL", "home": "Paris SG",   "away": "Arsenal",   "date": "2026-06-21"},
+  {"id": 4, "group": "UCL", "home": "Bayern",     "away": "Barcelona", "date": "2026-06-21"}
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "bankroll_initiale": 100.0,
+ "strategie": "prudent",
+ "expo_max": 0.12,
+ "kelly_frac": 0.25,
+ "cap_pari": 0.02,
+ "max_paris_ouverts": 10,
+ "confiance_min_desk": 3,
+ "metrique_verite": "CLV (cote prise vs cloture), pas le P/L court terme",
+ "regles": {
+   "values_1n2": "edge 3-12%, quart-Kelly plafonne 2%/pari, cotes reelles uniquement",
+   "buteurs": "edge >= 5%, mise 1.5% bankroll",
+   "gate_confiance": "ne parier que si la confiance du desk pour le match est >= confiance_min_desk (sinon info seulement)",
+   "zero_pari_ok": "si rien ne passe les filtres, l'agent ne parie pas",
+   "virtuel": "paris papier uniquement ; Vince replique manuellement s'il le souhaite"
+ }
+}

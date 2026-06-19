@@ -1,0 +1,19 @@
+{
+ "_meta": "Elo DÉRIVÉ des classements ATP réels (mai 2026) : Elo = 2100 - (rang-1)*7. Pas un vrai Elo par surface (faute de flux). Surfaces identiques. Source classements : ATP/Olympics 06/2026.",
+ "Sinner":          {"elo": {"hard": 2100, "clay": 2100, "grass": 2100}, "elo_base": 2100},
+ "Alcaraz":         {"elo": {"hard": 2093, "clay": 2093, "grass": 2093}, "elo_base": 2093},
+ "Zverev":          {"elo": {"hard": 2086, "clay": 2086, "grass": 2086}, "elo_base": 2086},
+ "Djokovic":        {"elo": {"hard": 2079, "clay": 2079, "grass": 2079}, "elo_base": 2079},
+ "Shelton":         {"elo": {"hard": 2072, "clay": 2072, "grass": 2072}, "elo_base": 2072},
+ "Auger-Aliassime": {"elo": {"hard": 2065, "clay": 2065, "grass": 2065}, "elo_base": 2065},
+ "De Minaur":       {"elo": {"hard": 2058, "clay": 2058, "grass": 2058}, "elo_base": 2058},
+ "Medvedev":        {"elo": {"hard": 2051, "clay": 2051, "grass": 2051}, "elo_base": 2051},
+ "Fritz":           {"elo": {"hard": 2044, "clay": 2044, "grass": 2044}, "elo_base": 2044},
+ "Bublik":          {"elo": {"hard": 2037, "clay": 2037, "grass": 2037}, "elo_base": 2037},
+ "Musetti":         {"elo": {"hard": 2030, "clay": 2030, "grass": 2030}, "elo_base": 2030},
+ "Lehecka":         {"elo": {"hard": 2023, "clay": 2023, "grass": 2023}, "elo_base": 2023},
+ "Rublev":          {"elo": {"hard": 2016, "clay": 2016, "grass": 2016}, "elo_base": 2016},
+ "Cobolli":         {"elo": {"hard": 2009, "clay": 2009, "grass": 2009}, "elo_base": 2009},
+ "Khachanov":       {"elo": {"hard": 2002, "clay": 2002, "grass": 2002}, "elo_base": 2002},
+ "Paul":            {"elo": {"hard": 1960, "clay": 1960, "grass": 1960}, "elo_base": 1960}
+}

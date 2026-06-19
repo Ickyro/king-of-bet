@@ -1,0 +1,67 @@
+name: Refresh & Deploy King of Bet
+
+on:
+  schedule:
+    - cron: "0 6 * * *"      # tous les jours 06:00 UTC (~08:00 Paris)
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+# Permissions minimales par défaut ; chaque job n'obtient QUE ce dont il a besoin.
+permissions:
+  contents: read
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # 1) Rafraîchit les données et committe l'état (bankroll, Elo, CLV, calibration).
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # uniquement ce job peut écrire dans le dépôt
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh (cotes + résultats + moteur + calibration)
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+          FETCH_PROPS: ${{ vars.FETCH_PROPS }}
+        run: python cloud_refresh.py
+      - name: Self-test (informatif)
+        run: python selftest.py --no-run || true
+      - name: Commit de l'état rafraîchi
+        run: |
+          git config user.name "kob-bot"
+          git config user.email "kob-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Aucun changement à committer."
+          else
+            git commit -m "chore: refresh données ($(date -u +%F)) [skip ci]"
+            git push    # échoue le job si le push échoue (pas de masquage silencieux)
+          fi
+
+  # 2) Déploie le site. Ne peut PAS écrire dans le dépôt (contents: read).
+  deploy:
+    needs: refresh
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+      contents: read
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4   # récupère le commit fraîchement poussé par 'refresh'
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,9 @@
+{
+ "_meta": "DONNEES DEMO NFL (ppg/oppg illustratifs, intersaison juin). A remplacer par collecte (off/def rating, pace).",
+ "Chiefs":     {"ppg": 26.5, "oppg": 19.8},
+ "49ers":      {"ppg": 27.2, "oppg": 18.9},
+ "Ravens":     {"ppg": 28.0, "oppg": 20.5},
+ "Bills":      {"ppg": 26.8, "oppg": 21.0},
+ "Lions":      {"ppg": 27.5, "oppg": 22.4},
+ "Eagles":     {"ppg": 25.0, "oppg": 21.8}
+}
