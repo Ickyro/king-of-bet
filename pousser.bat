@@ -58,13 +58,25 @@ git commit -m "King of Bet - mise a jour" 1>nul 2>nul || echo (Rien de nouveau a
 REM --- 8) Remote + push ---
 git remote get-url origin >nul 2>nul && (git remote set-url origin "!URL!") || (git remote add origin "!URL!")
 git branch -M main
+
+echo.
+echo Synchronisation avec GitHub (recuperation des maj automatiques du bot)...
+git fetch origin main 2>nul
+git merge --no-edit -X theirs origin/main
+if errorlevel 1 (
+  echo [ATTENTION] Conflit de fusion - annulation propre.
+  git merge --abort 2>nul
+  echo Essaie une fois de plus : si ca persiste, dis-le a l'assistant.
+)
+
 echo.
 echo Envoi vers !URL! ...
 echo (Si on demande un identifiant : connecte-toi a GitHub dans la fenetre, ou utilise un token.)
 git push -u origin main
 if errorlevel 1 (
   echo.
-  echo [ECHEC] Le push a echoue. Verifie l'URL et ta connexion GitHub, puis relance.
+  echo [ECHEC] Le push a echoue. Souvent : relancer ce script une 2e fois suffit.
+  echo Sinon verifie l'URL et ta connexion GitHub.
   pause & exit /b 1
 )
 
