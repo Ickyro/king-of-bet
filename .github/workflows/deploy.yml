@@ -40,10 +40,12 @@ jobs:
           git config user.email "kob-bot@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then
-            echo "Aucun changement à committer."
+            echo "Aucun changement a committer."
           else
-            git commit -m "chore: refresh données ($(date -u +%F)) [skip ci]"
-            git push    # échoue le job si le push échoue (pas de masquage silencieux)
+            git commit -m "chore: refresh donnees ($(date -u +%F)) [skip ci]"
+            # se resynchroniser puis pousser ; tolerant (un re-run/concurrence ne doit pas casser le deploiement)
+            git pull --rebase --autostash -X theirs origin main || git rebase --abort || true
+            git push origin HEAD:main || echo "::warning::Push ignore (re-run d'un ancien commit ou course) - le deploiement utilise l'etat courant ; le prochain run normal resynchronisera."
           fi
 
   # 2) Déploie le site. Ne peut PAS écrire dans le dépôt (contents: read).
@@ -60,6 +62,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4   # récupère le commit fraîchement poussé par 'refresh'
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true        # active GitHub Pages automatiquement (plus besoin du réglage manuel)
       - uses: actions/upload-pages-artifact@v3
         with:
           path: app
