@@ -1,23 +1,23 @@
 {
- "n": 25,
- "brier_model": 0.655,
+ "n": 27,
+ "brier_model": 0.6301,
  "brier_uniform": 0.6667,
- "logloss": 1.0539,
- "hit_rate": 52.0,
+ "logloss": 1.0196,
+ "hit_rate": 55.6,
  "reliability": [
   {
    "lo": 0.0,
    "hi": 0.2,
-   "p_pred": 13.3,
-   "p_emp": 21.4,
-   "n": 28
+   "p_pred": 13.1,
+   "p_emp": 20.0,
+   "n": 30
   },
   {
    "lo": 0.2,
    "hi": 0.4,
-   "p_pred": 25.5,
-   "p_emp": 30.4,
-   "n": 23
+   "p_pred": 26.4,
+   "p_emp": 30.8,
+   "n": 26
   },
   {
    "lo": 0.4,
@@ -37,8 +37,8 @@
    "lo": 0.8,
    "hi": 1.0,
    "p_pred": 81.2,
-   "p_emp": 33.3,
-   "n": 3
+   "p_emp": 50.0,
+   "n": 4
   }
  ],
  "note": "WC (foot) — proba_log ∩ résultats"

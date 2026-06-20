@@ -148,6 +148,45 @@
    "edge": 5.3,
    "status": "pending",
    "pl": 0
+  },
+  {
+   "id": 12,
+   "placed": "2026-06-20",
+   "mid": 42,
+   "match": "Norway - Senegal",
+   "market": "1N2",
+   "sel": "1",
+   "cote": 2.41,
+   "stake": 0.52,
+   "edge": 4.4,
+   "status": "pending",
+   "pl": 0
+  },
+  {
+   "id": 13,
+   "placed": "2026-06-20",
+   "mid": 56,
+   "match": "Japan - Sweden",
+   "market": "1N2",
+   "sel": "1",
+   "cote": 2.3,
+   "stake": 0.53,
+   "edge": 4.1,
+   "status": "pending",
+   "pl": 0
+  },
+  {
+   "id": 14,
+   "placed": "2026-06-20",
+   "mid": 47,
+   "match": "Colombia - DR Congo",
+   "market": "1N2",
+   "sel": "1",
+   "cote": 1.55,
+   "stake": 1.08,
+   "edge": 3.5,
+   "status": "pending",
+   "pl": 0
   }
  ]
 }
