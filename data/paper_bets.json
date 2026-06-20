@@ -187,6 +187,19 @@
    "edge": 3.5,
    "status": "pending",
    "pl": 0
+  },
+  {
+   "id": 15,
+   "placed": "2026-06-20",
+   "mid": 70,
+   "match": "Algeria - Austria",
+   "market": "1N2",
+   "sel": "2",
+   "cote": 2.6,
+   "stake": 0.58,
+   "edge": 5.1,
+   "status": "pending",
+   "pl": 0
   }
  ]
 }
