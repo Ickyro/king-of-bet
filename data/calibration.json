@@ -1,9 +1,9 @@
 {
- "n": 24,
- "brier_model": 0.6562,
+ "n": 25,
+ "brier_model": 0.655,
  "brier_uniform": 0.6667,
- "logloss": 1.0547,
- "hit_rate": 50.0,
+ "logloss": 1.0539,
+ "hit_rate": 52.0,
  "reliability": [
   {
    "lo": 0.0,
@@ -15,9 +15,9 @@
   {
    "lo": 0.2,
    "hi": 0.4,
-   "p_pred": 24.3,
-   "p_emp": 30.0,
-   "n": 20
+   "p_pred": 25.5,
+   "p_emp": 30.4,
+   "n": 23
   },
   {
    "lo": 0.4,
