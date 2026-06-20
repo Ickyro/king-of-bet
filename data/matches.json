@@ -375,25 +375,33 @@
     0
    ],
    "date": "2026-06-19"
-  }
- ],
- "remaining": [
+  },
   {
-   "id": 28,
    "group": "C",
    "home": "Scotland",
    "away": "Morocco",
+   "score": [
+    0,
+    1
+   ],
    "date": "2026-06-19",
-   "ref_conf": "CONCACAF"
+   "xg": [
+    0.24,
+    0.82
+   ]
   },
   {
-   "id": 30,
    "group": "C",
    "home": "Brazil",
    "away": "Haiti",
-   "date": "2026-06-19",
-   "ref_conf": "UEFA"
-  },
+   "score": [
+    1,
+    0
+   ],
+   "date": "2026-06-19"
+  }
+ ],
+ "remaining": [
   {
    "id": 31,
    "group": "D",
