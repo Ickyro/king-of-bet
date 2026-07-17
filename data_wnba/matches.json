@@ -33,24 +33,17 @@
   "home": "Minnesota Lynx",
   "away": "Portland Fire",
   "odds": {
-   "ml_home": 1.12,
-   "ml_away": 8.75,
-   "total_line": 168.5,
-   "over": 1.91,
-   "under": 1.94,
    "est": false,
-   "n_books": 3,
+   "n_books": 2,
    "shop": {
     "ml_home": "fanduel",
-    "ml_away": "pinnacle"
+    "ml_away": "draftkings"
    },
-   "sharp": {
-    "ml_home": 1.09,
-    "ml_away": 8.75,
-    "total_line": 168.5,
-    "over": 1.91,
-    "under": 1.94
-   }
+   "ml_home": 1.13,
+   "ml_away": 6.25,
+   "total_line": 171.5,
+   "over": 1.91,
+   "under": 1.91
   }
  },
  {

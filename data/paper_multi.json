@@ -39,7 +39,26 @@
    "cote_close": 1.94,
    "clv": -0.0412,
    "pl": 3.32
+  },
+  {
+   "id": 3,
+   "sport": "wnba",
+   "date": "2026-06-16",
+   "event_id": 2,
+   "match": "Under 171.5 pts (Minnesota Lynx @ Portland Fire)",
+   "market": "Total",
+   "sel": "Under 171.5",
+   "cote": 1.91,
+   "p": 0.5832,
+   "edge": 0.1138,
+   "stake": 3.28,
+   "status": "pending",
+   "placed": "2026-07-17",
+   "line_open": 1.91,
+   "cote_close": null,
+   "clv": null,
+   "pl": 0
   }
  ],
- "next_id": 3
+ "next_id": 4
 }
