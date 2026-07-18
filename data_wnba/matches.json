@@ -34,16 +34,25 @@
   "away": "Portland Fire",
   "odds": {
    "est": false,
-   "n_books": 2,
+   "n_books": 3,
    "shop": {
-    "ml_home": "fanduel",
-    "ml_away": "draftkings"
+    "ml_home": "draftkings",
+    "ml_away": "fanduel",
+    "over": "pinnacle",
+    "under": "pinnacle"
    },
-   "ml_home": 1.13,
-   "ml_away": 6.25,
-   "total_line": 171.5,
-   "over": 1.91,
-   "under": 1.91
+   "ml_home": 1.12,
+   "ml_away": 7.1,
+   "total_line": 176.0,
+   "over": 1.95,
+   "under": 1.83,
+   "sharp": {
+    "ml_home": 1.12,
+    "ml_away": 6.71,
+    "total_line": 176.0,
+    "over": 1.95,
+    "under": 1.83
+   }
   }
  },
  {

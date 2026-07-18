@@ -55,8 +55,8 @@
    "status": "pending",
    "placed": "2026-07-17",
    "line_open": 1.91,
-   "cote_close": null,
-   "clv": null,
+   "cote_close": 1.83,
+   "clv": 0.0437,
    "pl": 0
   }
  ],
